@@ -1,0 +1,2282 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Christophe Madoz Portfolio</title>
+    <base href="/">
+    <!-- Font Awesome -->
+    <link rel="icon" href="/images/main_icon.png" type="images/gif" sizes="16x16">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="shortcut icon" href="https://YourFaviconLinkHere.ico" type="image/x-icon" />
+
+    <link href="content/css/bootstrap.min.css" rel="stylesheet" />
+
+
+    <link href="content/css/styles.css" rel="stylesheet" />
+
+    <link href="content/css/mdb.min.css" rel="stylesheet" />
+
+    <link href="content/css/sweetalert2.min.css" rel="stylesheet" />
+
+    <link href="content/js/SyntaxHighlighter/styles/shCore.css" rel="stylesheet" />
+    <link href="content/js/SyntaxHighlighter/styles/shThemeRDark.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.35.4/css/bootstrap-dialog.min.css">
+
+    <style>
+        #web_api_app:hover
+        {
+            cursor:pointer;
+        }
+
+        .box_project{
+            box-shadow: 0px 0px 15px -4px #000000;
+
+        }
+
+        .box_project:hover{
+            cursor:pointer;
+        }
+    </style>
+
+</head>
+<body class="developer">
+
+    <!--                               MODALS                                          -->
+    <!--------------------------------------------------------------------------------------------------------->
+    <div id="myModal" class="modal">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#menu0">Math</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu1">Factorial</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu2">Palindrome</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu3">FizzBuzz</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu4">Sum Of All Fears</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <!--                           Calculation  Section                        -->
+                        <div id="menu0" class="tab-pane container active ">
+                            <!--  TAB ONE   -->
+                            <form id="formCalculations" class="was-validated" novalidate>
+                                <div class="container-fluid ">
+                                    <div class="row ">
+                                        <div class="col-lg-12 text-center h2 border-bottom pb-3 mb-3">Math Calculation Exercises  </div>
+                                        <div class="col-md-6">
+                                            <div class="row form-group">
+
+                                                <div class="col-md-12">
+                                                    <label for="num1">Enter number 1: </label> <input id="num1" name="num1" min="1" class="form-control clearField" type="number" placeholder="Number 1" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <label for="num2">Enter number 2: </label><input id="num2" name="num2" min="1" class="form-control clearField" type="number" placeholder="Number 2" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <label for="num3">Enter number 3: </label><input id="num3" name="num3" min="1" class="form-control  clearField" type="number" placeholder="Number 3" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <label for="num4">Enter number 4: </label><input id="num4" name="num4" min="1" class="form-control clearField" type="number" placeholder="Number 4" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <label for="num5">Enter number 5: </label><input id="num5" name="num5" min="1" class="form-control clearField" type="number" placeholder="Number 5" />
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 boxResult pt-2 pb-3 " id="boxResult" style="border:1px solid black; background-image: linear-gradient(to bottom, #f9f9f9 0%,#eaeaea 100%);">
+                                            <div class="row h3 ">
+
+                                                <div class="col-md-12 text-md-center mt-2">
+                                                    Results
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3 mb-3">
+                                                <p class="clearResult pl-3 displayResult" id="maxValue"></p>
+                                            </div>
+
+                                            <div class="row mb-3 ">
+                                                <p class="clearResult pl-3 displayResult" id="minValue"></p>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <p class="clearResult pl-3 displayResult" id="productValue"></p>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <p class="clearResult pl-3 displayResult" id="sumValue"></p>
+                                            </div>
+
+                                            <div class="row">
+                                                <p class="clearResult pl-3 displayResult" id="averageValue"></p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-12"><hr /></div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <button class="btn btn-primary btn-lg btn-block" type="button" id="btnCalculation">Calculate</button>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <button class="btn btn-danger btn-lg btn-block" type="button" id="btnClearForm">Clear</button>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <button class="btn btn-info btn-lg btn-block" type="button" id="btnShowCode">Show Code</button>
+                                        </div>
+                                    </div>
+                                    <!--------------- Code Display Section --------------------->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div id="code" style="width:auto;">
+                                                <pre class="brush: js">
+$("#btnCalculation").click(() => {
+
+    var numb1 = Number($("#num1").val());
+    var numb2 = Number($("#num2").val());
+    var numb3 = Number($("#num3").val());
+    var numb4 = Number($("#num4").val());
+    var numb5 = Number($("#num5").val());
+
+    if ($("#num1").val().length == 0 ||
+      $("#num2").val().length == 0 ||
+      $("#num3").val().length == 0 ||
+      $("#num4").val().length == 0 ||
+      $("#num5").val().length == 0) {
+      alert("Empty fails are not allowed. Sorry!");
+    }
+    else
+    {
+      var maxValue = Math.max(numb1, numb2, numb3, numb4, numb5);
+      var minValue = Math.min(numb1, numb2, numb3, numb4, numb5);
+      var maxValue = Math.max(numb1, numb2, numb3, numb4, numb5);
+      var prodValue = Number(numb1 * numb2 * numb3 * numb4 * numb5);
+      var sumValue = Number(numb1 + numb2 + numb3 + numb4 + numb5);
+      var averageValue = Number((numb1 + numb2 + numb3 + numb4 + numb5) / 5);
+      $("#maxValue").text("The Max value is :" + maxValue);
+      $("#minValue").text("The Min value is :" + minValue);
+      $("#productValue").text("The product value is :" + prodValue);
+      $("#sumValue").text("The sum value is :" + sumValue);
+      $("#averageValue").text("The average value is :" + averageValue);
+    }
+});
+
+$("#btnClearForm").click(() => {
+    $(".clearField").val("");
+    $(".clearResult").text("");
+});
+
+                                    </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!----------------------      End Of Code Display      --------------->
+
+                                </div>
+                            </form>
+                        </div>
+                        <!--                           End of calculation Section                   -->
+                        <!--                           Factorial Section                           -->
+                        <div id="menu1" class="tab-pane fade">
+                            <form id="factorialForm" class="was-validated" novalidate>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-12 text-center h2 border-bottom pb-3">Factorial Calculation  </div>
+                                        <div class="col-md-6">
+
+                                            <div class="row form-group">
+
+                                                <div class="col-md-12">
+                                                    <label for="num1">Enter number : </label> <input id="factorialNum" min="1" name="factorialNum" class="form-control clearFacField" type="number" />
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-6 boxResult pt-2 pb-3 mt-2" style="border:1px solid black; background-image: linear-gradient(to bottom, #f9f9f9 0%,#eaeaea 100%);">
+                                            <div class="row h3">
+
+                                                <div class="col-md-12 text-md-center pt-2">
+                                                    Result
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3 align-self-center">
+                                                <div class="col-md-12 text-md-center">
+                                                    <p id="facResult" class="clearFacResult text-center"></p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-12"><hr /></div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="btn btn-primary btn-lg btn-block" id="btnPalCal">Calculate</div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="btn btn-danger btn-lg btn-block" id="btnFacClear">Clear</div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="btn btn-info btn-lg btn-block" id="btnShowCodeFact">Show Code</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div id="codeFactorial" style="width:auto;">
+                                                <pre class="brush: js">
+ $("#btnPalCal").click(() => {
+    var factorialNumber = $("#factorialNum").val();
+    if ($("#factorialNum").val().length == 0)
+    {
+        alert("Empty fields are not allowed. Sorry!")
+    }
+    else
+    {
+        var initialNumber = factorialNumber;
+        var result = 1;
+
+        while (factorialNumber > 1) {
+
+            result *= factorialNumber;
+            factorialNumber--;
+        }
+
+        $("#palResult").html("The factorial of " + initialNumber + " is <span class=\"red\">" + result + "</span>");
+    }
+});
+
+$("#btnFacClear").click(() => {
+    $(".clearFacField").val("");
+    $(".clearFacResult").text("");
+});
+                                            
+                                             </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </form>
+                        </div>
+                        <!--                           End of Factorial Section                    -->
+                        <!--                           Palindrome Section                          -->
+                        <div id="menu2" class="tab-pane fade">
+                            <form id="palindromeForm" class="was-validated" novalidate>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-12 text-center h2 pb-3 border-bottom mb-3">Palindrome  </div>
+                                        <div class="col-md-6">
+
+                                            <div class="row form-group">
+
+                                                <div class="col-md-12">
+                                                    <label for="palText">Enter some text: </label> <input id="palText" name="palText"  class="form-control clearPalField" type="text" />
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-6 boxResult pt-2 pb-3" style="border:1px solid black; background-image: linear-gradient(to bottom, #f9f9f9 0%,#eaeaea 100%);">
+                                            <div class="row h3 ">
+
+                                                <div class="col-md-12 text-md-center pt-2">
+                                                    Result
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="row form-group text-center mb-0">
+                                                <div class="col-md-12 align-self-center">
+                                                    <p id="palAnswer" class="clearPalResult" style="font-size:large; "></p>
+                                                </div>
+                                            </div>
+                                            <div id="palMessage" class="alert alert-success hide">
+                                                <strong>Success! It's a palindrome.</strong>
+                                            </div>
+
+                                            <div id="palFailMessage" class="alert alert-danger hide">
+                                                <strong>It's not a palindrome</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12"><hr /></div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="btn btn-primary btn-lg btn-block" id="btnCheckPal">Check</div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="btn btn-danger btn-lg btn-block" id="btnClearPal">Clear</div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="btn btn-info btn-lg btn-block" id="btnShowCodePal">Show Code</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div id="codePalindrom" style="width:auto;">
+                                                <pre class="brush: js">
+$("#btnCheckPal").click(() => {
+
+    if ($("#palText").val().length != 0)
+    {
+
+        var initalText = $("#palText").val();
+        var parseText = "";
+        var palText = "";
+        var arrayTest = "";
+
+
+        for (var i = initalText.length - 1; i >= 0; i--)
+        {
+            parseText += initalText[i];
+        }
+
+
+        //Second method using substring function.
+        //for (var i = initalText.length - 1; i >= 0; i--)
+        //{
+        //    palText += initalText.substring(i, i + 1);
+        //}
+
+        //Third method using function chaining.
+        //arrayTest = initalText.split('').reverse().join('');
+
+
+        //Once the string is reversed, compare it to the initial string. 
+        if (initalText.localeCompare(parseText) == 0)
+        {
+            $("#palAnswer").html("The result after reversing " + initalText + " is <span class=\"palResult\">" + parseText + "</span>");
+            $("#palMessage").addClass("show");
+            $("#palMessage").removeClass("hide");
+
+            $("#palFailMessage").removeClass("show");
+            $("#palFailMessage").addClass("hide");
+        }
+        else
+        
+        {
+            $("#palAnswer").html("The result after reversing " + initalText + " is <span class=\"mathResult\">" + parseText + "</span>");
+            $("#palFailMessage").addClass("show");
+            $("#palFailMessage").removeClass("hide");
+
+            $("#palMessage").removeClass("show");
+            $("#palMessage").addClass("hide");
+        }
+    }
+
+});
+
+$("#btnClearPal").click(() => {
+
+    $(".clearPalField").val("");
+    $(".clearPalResult").text("");
+
+    $("#palFailMessage").removeClass("show");
+    $("#palFailMessage").addClass("hide");
+
+    $("#palMessage").removeClass("show");
+    $("#palMessage").addClass("hide");
+
+});
+
+                                          </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                        <!--                           End of Palindrome Section                    -->
+                        <!--                           FizzBuzz Section                            -->
+                        <div id="menu3" class="tab-pane fade">
+                            <form id="fizzbuzzForm" class="was-validated" novalidate>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-12 text-center h2 pb-3 border-bottom mb-3">FizzBuzz  </div>
+                                        <div class="col-md-6">
+
+                                            <div class="row form-group">
+
+                                                <div class="col-md-12">
+                                                    <label for="txtFibNum1">Enter a number : </label> <input id="txtFibNum1" name="txtFibNum1" min="1" class="form-control clearFBField" type="number" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group">
+
+                                                <div class="col-md-12">
+                                                    <label for="txtFibNum2">Enter a number : </label> <input id="txtFibNum2" name="txtFibNum2" min="1" class="form-control clearFBField" type="number" />
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-6 boxResult pt-2 pb-3" style="border:1px solid black; background-image: linear-gradient(to bottom, #f9f9f9 0%,#eaeaea 100%);">
+                                            <div class="row h3">
+                                                <!--<div class="col-md-12 align-self-center boxResult">-->
+
+                                                <div class="col-md-12 text-md-center pt-2">
+                                                    Result
+                                                </div>
+                                            </div>
+                                            <div class="row form-group text-center pre-scrollable" style="height:400px;">
+                                                <div class="col-md-12 align-self-center ">
+                                                    <p id="fbAnswer" class="clearFBResult" style="font-size:large; "></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-lg-12"><hr /></div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="btn btn-primary btn-lg btn-block" id="btnFbStart">Go</div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="btn btn-danger btn-lg btn-block" id="btnClearFB">Clear</div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="btn btn-info btn-lg btn-block" id="btnShowCodeFizzBuzz">Show Code</div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div id="codeFizzBuzz" style="width:auto;">
+                                                <pre class="brush: js">
+$("#btnFbStart").click(() => {
+
+    var number1 = Number($("#txtFibNum1").val());
+    var number2 = Number($("#txtFibNum2").val());
+
+    clearFBanswerField();
+    if ($("#txtFibNum1").val().length == 0 || $("#txtFibNum2").val().length == 0)
+    {
+        alert("Empty fields are not allowed. Sorry!");
+    }
+    else
+    {
+        let strResultFb = "";
+
+        for (var i = 1; i <= 100; i++)
+        {
+            if ((i % number1 == 0) && (i % number2 == 0))
+            {
+                strResultFb += "<span class=\"red\">FizzBuzz</span>";
+            }
+            else if (i % number1 == 0)
+            {
+                strResultFb += "<span class=\"green\">Fizz</span>";
+            }
+            else if (i % number2 == 0)
+            {
+                strResultFb += "<span class=\"blue\">Buzz</span>";
+            }
+            else
+            {
+                strResultFb += (i + "");
+            }
+
+            //Add a period if the end of the iteration has been reached.
+            strResultFb += (i < 100) ? ", " : ".";
+
+            //if (i < 100)
+            //{
+            //    strResultFb += ", ";
+            //}
+            //else {
+            //    strResultFb += ".";
+            //}
+        }
+
+        //Render HTML tags within the string.
+        var html = $.parseHTML(strResultFb);
+
+        //Display string.            
+        $("#fbAnswer").append(html);
+    }
+
+});
+
+function clearFBanswerField()
+{
+    $("#fbAnswer").text("");
+}
+
+$("#btnClearFB").click(() => {
+
+    $(".clearFBField").val("");
+    $(".clearFBResult").text("");
+});
+
+
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </form>
+                        </div>  <!--                          End of FizzBuzz Section           -->
+                        <!--                           Sum Of All Fears Section                    -->
+                        <div id="menu4" class="tab-pane fade">
+                            <form id="sofForm" class="was-validated" novalidate>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-12 text-center h2 mt-2 pb-3 border-bottom mb-3 ">Sum Of All Fears  </div>
+
+                                        
+
+                                        <div class="row">
+                                            <div class="col-md-12 text-center h6">
+                                                Create a searchable array by entering 6 numbers into the boxes below.
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-2">
+                                                <label for="palText">Number 1 </label><input id="number1" name="number1" min="1" class="form-control clearSOFfield" type="number" />
+
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <label for="palText">Number 2 </label><input id="number2" name="number2" min="1" class="form-control clearSOFfield" type="number" />
+
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <label for="palText">Number 3 </label><input id="number3" name="number3" min="1" class="form-control clearSOFfield" type="number" />
+
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <label for="palText">Number 4 </label><input id="number4" name="number4" min="1" class="form-control clearSOFfield" type="number" />
+
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <label for="palText">Number 5 </label><input id="number5" name="number5"  min="1" class="form-control clearSOFfield" type="number" />
+
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <label for="palText">Number 6 </label><input id="number6" name="number6" min="1" class="form-control clearSOFfield" type="number" />
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label for="kValue" class="h6">Establish a K value in the box below. </label> <input id="kValue" name="kValue" min="1" class="form-control clearSOFfield" type="number" />
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12"><hr /></div>
+                                        <div class="col-md-12 boxResult pt-3 pb-3 mt-1" style="border:1px solid black; background-image: linear-gradient(to bottom, #f9f9f9 0%,#eaeaea 100%);">
+                                            <div class="row h3">
+                                                <div class="col-md-12 text-md-center">
+                                                    Result
+                                                </div>
+                                            </div>
+                                            <div class="row form-group text-center ">
+                                                <div class="col-md-12 align-self-center ">
+                                                    <p id="sofAnswer" class="clearSOFresult"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12"><hr /></div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="btn btn-primary btn-lg btn-block" id="btnSOFStart">Go</div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="btn btn-danger btn-lg btn-block" id="btnClearSOF">Clear</div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="btn btn-info btn-lg btn-block" id="btnShowCodeFSOF">Show Code</div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div id="codeSOF" style="width:auto;">
+                                                <pre class="brush: js">
+$("#codeSOF").hide();
+
+$("#btnShowCodeFSOF").click(() => {
+
+      $("#codeSOF").toggle();
+     if ($("#btnShowCodeFSOF").text() == "Show Code")
+     {
+       $("#btnShowCodeFSOF").text("Hide Code");
+     }
+     else
+     {
+       $("#btnShowCodeFSOF").text("Show Code");
+     }
+ });
+
+
+$("#btnSOFStart").click(() => {
+
+            //Collect values from user.
+            //Warn user if no values are entered.
+  
+            if ($("#number1").val().length == 0 ||
+                $("#number2").val().length == 0 ||
+                $("#number3").val().length == 0 ||
+                $("#number4").val().length == 0 ||
+                $("#number5").val().length == 0 ||
+                $("#number6").val().length == 0 ||
+                $("#kValue").val().length == 0) {
+                
+            }
+            else
+            {
+       
+                var numbList = [];
+
+                //Populate array with numerical values.
+                numbList.push(  Number($("#number1").val()) );
+                numbList.push(  Number($("#number2").val()) );
+                numbList.push(  Number($("#number3").val()) );
+                numbList.push(  Number($("#number4").val()) );
+                numbList.push(  Number($("#number5").val()) );
+                numbList.push(  Number($("#number6").val()) );
+                var kValue = Number($("#kValue").val())
+                var foundSet;
+
+               //Iterate through array using brute force method.
+               for (var i = 0, foundSet = false; i < numbList.length - 1 && foundSet != true; i++)
+               {
+                  for (var j = i + 1; j <= numbList.length - 1; j++)
+                  {
+                      if (numbList[i] + numbList[j] == kValue) {
+                          //Display result
+                          clearSOFfields();
+                          $("#sofAnswer").append($.parseHTML(kValue + " was found by adding array member <span class=\"red\">" + numbList[i] + "</span> and <span class=\"red\">" + numbList[j] + "</span>"));
+                          foundSet = true;
+                      }
+                      //Exit all loops if set is found.
+                      if (foundSet) break;
+                  }
+                }
+
+                if (!foundSet)
+                {
+                    clearSOFfields();
+                    $("#sofAnswer").append($.parseHTML("No set were found. Try again!"));
+                }
+
+
+            }
+});
+
+$("#btnClearSOF").click(() => {
+   
+    $(".clearSOFfield").val("");
+    $(".clearSOFresult").text("");
+});
+
+function clearSOFfields() {
+   
+    $("#sofAnswer").text("");
+}
+
+
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </form>
+                        </div>
+                        <!--                           End of Sum Of All Fears Section             -->
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--                             MODAL GEOLOCATION API TOOLS                                  -->
+
+    <div id="modalAPI" class="modal">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item"><a class="nav-link active" data-toggle="pill" href="#home">Weather API Project</a></li>
+                       
+                        
+
+                    </ul>
+                    <div class="tab-content">
+                       
+                        <div id="menu0" class="tab-pane container active ">
+                            <!--  TAB ONE   -->
+                            <form class="was-validated">
+                                <div class="container-fluid ">
+                                    <div class="row ">
+                                        <!-- Main Row -->
+                                        <div class="col-lg-12 text-center h2 border-bottom pb-3" >Weather App  </div>
+
+                                        <div class="col-lg-12 mb-2" >
+                                            <!-- first col -->
+                                            
+                                                <div class="row" >
+
+                                                    
+                                                        <div class="col-md-6" >
+                                                            <div class="row">
+                                                                <div class="col-md-4 h4" "><span>Latitude: </span> </div>
+                                                                <div class="col-md-8 text-left h4"><span style="color:darkgreen" id="txtLatitude"></span></div>
+                                                            </div>
+                                                        </div>
+                                                   
+
+                                                    <div class=" col-md-6">
+                                                        <div class="row">
+
+                                                            <div class="col-md-4 h4"><span >Longitude: </span> </div>
+                                                            <div class="col-md-8 h4"><span style="color:darkgreen" id="txtLongitude"></span></div>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div> <!-- end of mail col-->
+                                        </div>
+
+                                        <!-- Second col -->
+
+                                        <div class="col-md-12 mb-2">
+                                            <div class="col-md-12 text-md-center">
+                                              
+                                                <p class="h3" id="txtAddressLocation"></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- GOOGLE MAP LOCATION  -->
+
+                                        <div class="col-md-6" style="width:100%">
+                                            <div id="map-canvas" style="height: 400px; width:100%; border:1px solid black; margin-bottom:20px;"></div>
+                                        </div>
+
+
+                                        <div class="col-md-6" style="border: 1px solid green; background-image: linear-gradient(to bottom, #f9f9f9 0%,#eaeaea 100%); ">
+
+
+                                            <div class="row mb-2 mt-3 ml-3">
+                                                <strong>Region: </strong><span id="timezone" class="ml-2 "></span>
+                                            </div>
+
+                                            <div class="row mb-2 ml-3">
+                                                <strong>Location: </strong><span id="location2" class="ml-2"></span>
+                                            </div>
+
+                                            <div class="row mb-2 ml-3">
+                                                <strong>Weather Summary: </strong><span id="summary" class="ml-2"></span>
+                                            </div>
+
+
+                                            <div class="row mb-2 ml-3">
+                                                <strong>Temperature: </strong><span id="temperature" class="ml-2"></span>
+                                            </div>
+
+
+                                            <div class="row mb-2 ml-3">
+                                                <strong>Dew Point: </strong><span id="dewPoint" class="ml-2"></span>
+                                            </div>
+
+                                            <div class="row mb-2 ml-3">
+                                                <strong>Humidity: </strong><span id="humidity" class="ml-2"></span>
+                                            </div>
+
+                                            <div class="row mb-2 ml-3">
+                                                <strong>Pressure: </strong><span id="pressure" class="ml-2"></span>
+                                            </div>
+
+                                            <div class="row mb-2 ml-3">
+                                                <strong>Wind Speed: </strong><span id="windSpeed" class="ml-2"></span>
+                                            </div>
+
+                                            <div class="row mb-2 ml-3">
+                                                <strong>Wind Speed: </strong><span id="windSpeed" class="ml-2"></span>
+                                            </div>
+                                            <div class="row mb-2 ml-3">
+                                                <strong>Visibility: </strong><span id="visibility" class="ml-2"></span>
+                                            </div>
+
+                                            <div class="row mb-2 ml-3">
+                                                <strong>Ozone: </strong><span id="ozone" class="ml-2"></span>
+                                            </div>
+
+                                            <div class="row mb-2 ml-3">
+                                                <strong>Precip Probability: </strong><span id="precipProbability" class="ml-2"></span>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-12"><hr /></div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <button class="btn btn-primary btn-lg btn-block" type="button" id="btnWeather">Check Weather</button>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <button class="btn btn-danger btn-lg btn-block" type="button" id="btnClearForm">Clear</button>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <button class="btn btn-info btn-lg btn-block" type="button" id="btnWeatherShowCode">Show Code</button>
+                                        </div>
+                                    </div>
+                                    <!--------------- Code Display Section --------------------->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div id="codeGeolocation" style="width:auto;">
+                                                <pre class="brush: js">
+var API_key = 'AIzaSyB9811_bTr_LFxMpe06ZAxBuJiQDn3VHV8';
+var weather_api_key = 'a238910df31e98e2626a88484e5407ca';
+var txtSource = "";
+
+var txtTarget = document.getElementById("txtTarget");
+
+var request = false;
+
+//check browser
+if (window.XMLHttpRequest) {
+    request = new XMLHttpRequest();
+
+} else if (window.ActiveXObject) {
+    request = new ActiveXObject("Microsoft.XMLHTTP");
+}
+
+
+$("#btnTranslate").click(function () {
+
+
+    var txtSource = $('#txtSource').val();
+    var url = "https://www.googleapis.com/language/translate/v2?q=" + txtSource + "&target=fr&source=en&key=" + API_key + "";
+
+
+    request.onreadystatechange = function ()
+    {
+        if (request.readyState == 4 && request.status == 200) {
+            //parse into JSON
+            var json = JSON.parse(request.responseText);
+            //raw return value
+            var translatedText = json.data.translations[0].translatedText;
+            //cleanup	
+            translatedText = translatedText.replace(/&quot;/g, '"');
+            //output
+            txtTarget.value = translatedText;
+        }
+    }
+    request.open('GET', url, true);
+    
+    request.send(null);
+});
+
+
+$("#btnWeather").click(function () {
+
+    //Geolocation section
+    var center = new google.maps.LatLng(47.4419, 6.8822);
+    var mapOptions = null;
+    var map = null;
+    var geocoder = null;
+    var infowindow = null;
+    var weather_api_key = 'AIzaSyB9811_bTr_LFxMpe06ZAxBuJiQDn3VHV8';
+    let location = "";
+
+    function initialize() {
+
+        mapOptions = {
+            zoom: 7,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            center: center
+        };
+
+        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        geocoder = new google.maps.Geocoder;
+        infowindow = new google.maps.InfoWindow;
+
+        var marker = new google.maps.Marker({
+            map: map,
+            position: center
+        });
+
+
+        //======================== Current location =============
+
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+
+           $("#latitude").val(pos.lat);
+           $("#longitude").val(pos.lng);
+           getWeather(pos.lat, pos.lng);
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+
+        }, function () {
+            //handleLocationError(true, infoWindow, map.getCenter());
+        });
+
+        //====================================================
+
+        geocodeLatLng(geocoder,map, infowindow);
+    }
+
+    initialize();
+
+    function geocodeLatLng(geocoder, map, infowindow) {
+ 
+
+        var latitude = $("#latitude").val();
+        var longitude = $("#longitude").val();
+               
+        var latlng = { lat: parseFloat(latitude), lng: parseFloat(longitude) };
+        geocoder.geocode({ 'location': latlng }, function (results, status) {
+            if (status === 'OK') {
+                if (results[0]) {
+                    map.setZoom(11);
+                    var marker = new google.maps.Marker({
+                        position: latlng,
+                        map: map
+                    });
+                    let addressfr = results[0].address_components;
+
+                    console.log(addressfr[0].short_name + " " + addressfr[1].short_name + " " + addressfr[2].short_name);
+
+                    infowindow.setContent(results[0].formatted_address);
+
+                    $("#location2").text(addressfr[0].short_name + " " + addressfr[1].short_name + " " + addressfr[2].short_name);
+
+                    infowindow.open(map, marker);
+                }
+                else {
+                    //window.alert('No results found');
+                }
+            }
+            else {
+                //window.alert('Geocoder failed due to: ' + status);
+            }
+        });
+
+
+        var options = {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 0
+        };
+
+        
+
+        navigator.geolocation.getCurrentPosition(success, error, options);
+    }//End of geolocation function
+
+    function success(pos) {
+        var crd = pos.coords;
+
+        console.log('Your current position is:');
+        console.log(`Latitude : ${crd.latitude}`);
+        console.log(`Longitude: ${crd.longitude}`);
+        console.log(`More or less ${crd.accuracy} meters.`);
+    }
+
+    function error(err) {
+        console.warn(`ERROR(${err.code}): ${err.message}`);
+    }
+
+    function getWeather(latitude,longitude)
+    {
+
+        var weather_api_key = 'a238910df31e98e2626a88484e5407ca';
+        //Build url 
+        var url = "https://api.darksky.net/forecast/" + weather_api_key + "/" + latitude + "," + longitude + "";
+
+        //Call API 
+
+        $.ajax({
+            type: "GET",
+            url: url,
+            crossDomain: true,
+            dataType: 'jsonp',
+            success: function (results) {
+                console.log(results.currently.summary);
+
+
+                $("#summary").text(results.currently.summary);
+
+                if (results.currently.summary == "Clear") {
+
+                    $("#summary").append("<img src="images/day.svg"  />");
+
+                }
+                else if (results.currently.summary == "Mostly Cloudy") {
+                    $("#summary").append("<img style=" padding-left:20px;" src="images/cloudy.svg\"  />");
+                }
+                else if (results.currently.summary == "Overcast") {
+                    $("#summary").append("<img style=" padding-left:20px;" src="images/cloudy-day-1.svg\"  />");
+                }
+
+                $("#timezone").text(results.timezone);
+                $("#temperature").text(results.currently.temperature + " F");
+
+                $("#dewPoint").text(results.currently.dewPoint + " F");
+                $("#humidity").text(results.currently.humidity + "%");
+                $("#pressure").text(results.currently.pressure + " mbar");
+                $("#windSpeed").text(results.currently.windSpeed + "mbar");
+                $("#windSpeed").text(results.currently.uvIndex + "mbar");
+                $("#windSpeed").text(results.currently.visibility + "mbar");
+                $("#ozone").text(results.currently.ozone + "mbar");
+
+                $("#precipProbability").text(results.currently.precipProbability + " %");
+            }
+        });
+
+    }
+
+});
+
+                                    </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!----------------------      End Of Code Display      --------------->
+
+                                </div>
+                            </form>
+                        </div>
+                        <!--                           End of API Section                   -->
+
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--  MODAL TRANSLATION SECTION  (Not functional yet) -->
+
+
+    <div id="modalAPItranslation" class="modal">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item"><a class="nav-link active" data-toggle="pill" href="#home">Weather API Project</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="pill" href="#menu1">Translation API Project</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="pill" href="#menu2">Geolocation API Project</a></li>
+
+                    </ul>
+                    <div class="tab-content">
+                        <!--                           Calculation  Section                        -->
+                        <div id="menu0" class="tab-pane container active ">
+                            <!--  TAB ONE   -->
+                            <form class="was-validated">
+                                <div class="container-fluid ">
+                                    <div class="row ">
+                                        <div class="col-lg-12 text-center h2 border-bottom pb-5">Weather App  </div>
+                                        <div class="col-md-6">
+                                            <div class="row form-group">
+
+                                                <div class="col-md-12">
+                                                    <label for="latitude">Enter the latitude </label> <input id="latitude" class="form-control clearField" type="number" required />
+                                                    <div class="invalid-feedback">Please enter a latitude.</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <label for="longitude">Enter the longitude </label><input id="longitude" class="form-control clearField" type="number" required />
+                                                    <div class="invalid-feedback">Please enter a longitude</div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="col-md-6 boxResult pt-2 pb-3 " id="boxResult">
+                                            <div class="row h3 ">
+
+                                                <div class="col-md-12 text-md-center">
+                                                    Results
+                                                </div>
+                                            </div>
+                                            <!-- GOOGLE MAP LOCATION  -->
+                                            <div class="row mt-5 mb-3">
+                                                <div id="map-canvas" style="height: 400px; width:400px; border:1px solid black; margin-bottom:20px;"></div>
+                                            </div>
+
+
+
+                                            <div class="alert alert-info" role="alert">
+
+                                                <strong>Region: </strong><p id="timezone"></p>
+                                            </div>
+
+                                            <div class="alert alert-info" role="alert">
+                                                <strong>Location: </strong><p id="location2"></p>
+                                            </div>
+
+
+                                            <div class="alert alert-info" role="alert">
+
+                                                <strong>Weather Summary: </strong><p id="summary"></p>
+                                            </div>
+
+
+                                            <div class="alert alert-info" role="alert">
+
+                                                <strong>Temperature: </strong><p id="temperature"></p>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <p class="clearResult pl-3" id="sumValue"></p>
+                                            </div>
+
+                                            <div class="row">
+                                                <p class="clearResult pl-3" id="averageValue"></p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-12"><hr /></div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <button class="btn btn-primary btn-lg btn-block" type="button" id="btnWeather">Check Weather</button>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <button class="btn btn-danger btn-lg btn-block" type="button" id="btnClearForm">Clear</button>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <button class="btn btn-info btn-lg btn-block" type="button" id="btnShowCode">Show Code</button>
+                                        </div>
+                                    </div>
+                                    <!--------------- Code Display Section --------------------->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div id="code" style="width:auto;">
+                                                <pre class="brush: js">
+$("#btnCalculation").click(() => {
+
+    var numb1 = Number($("#num1").val());
+    var numb2 = Number($("#num2").val());
+    var numb3 = Number($("#num3").val());
+    var numb4 = Number($("#num4").val());
+    var numb5 = Number($("#num5").val());
+
+    if ($("#num1").val().length == 0 ||
+      $("#num2").val().length == 0 ||
+      $("#num3").val().length == 0 ||
+      $("#num4").val().length == 0 ||
+      $("#num5").val().length == 0) {
+      alert("Empty fields are not allowed. Sorry!");
+    }
+    else
+    {
+      var maxValue = Math.max(numb1, numb2, numb3, numb4, numb5);
+      var minValue = Math.min(numb1, numb2, numb3, numb4, numb5);
+      var maxValue = Math.max(numb1, numb2, numb3, numb4, numb5);
+      var prodValue = Number(numb1 * numb2 * numb3 * numb4 * numb5);
+      var sumValue = Number(numb1 + numb2 + numb3 + numb4 + numb5);
+      var averageValue = Number((numb1 + numb2 + numb3 + numb4 + numb5) / 5);
+      $("#maxValue").text("The Max value is :" + maxValue);
+      $("#minValue").text("The Min value is :" + minValue);
+      $("#productValue").text("The product value is :" + prodValue);
+      $("#sumValue").text("The sum value is :" + sumValue);
+      $("#averageValue").text("The average value is :" + averageValue);
+    }
+});
+
+$("#btnClearForm").click(() => {
+    $(".clearField").val("");
+    $(".clearResult").text("");
+});
+
+                                    </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!----------------------      End Of Code Display      --------------->
+
+                                </div>
+                            </form>
+                        </div>
+                        <!--                           End of calculation Section                   -->
+
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <p>One fine body…</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+   
+    <!--         END OF MODALS          -->
+
+
+    <!--<div class="yellow" style="position: absolute; height:100px; width:15px; border-radius:0 5px 5px 0; box-shadow: 0px 0px 19px -1px rgba(0,0,0,0.75); background-color: red; z-index: 10; left:0; top:300px; "></div>-->
+    <!--Navigation & Intro-->
+    <header>
+
+        <!-- Navbar Section -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+            <div class="container">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+                    <!-- Social Icons  -->
+                    <ul class="navbar-nav nav-flex-icons" id="social">
+                        <!--<li class="nav-item">
+                            <a class="nav-link"><i class="fab fa-facebook-f light-green-text-2"></i></a>
+                        </li>-->
+                        <li class="nav-item">
+                            <a href="https://www.linkedin.com/in/christophe-madoz-14836b18b" target="_blank" class="nav-link"><i class="fab fa-linkedin-in light-green-text-2"></i></a>
+                        </li>
+                    </ul>
+                    <!-- Main Menu -->
+                    <ul class="navbar-nav ml-auto smooth-scroll" id="main_menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about" data-offset="100">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills" data-offset="100">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#works" data-offset="100">Challenges</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects" data-offset="100">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact" data-offset="100">Contact</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Intro Section -->
+        <div id="home" class="view jarallax" data-jarallax='{"speed": 0.2}'>
+            <div class="mask rgba-white-strong">
+                <div class="container h-100 d-flex justify-content-center align-items-center">
+                    <div class="row smooth-scroll">
+                        <div class="col-md-12 pt-3">
+                            <div class="white-text text-center pt-5">
+                                <h1 class="display-2 mb-4 dark-grey-text wow fadeIn">I am <strong>Christophe Madoz</strong></h1>
+                                <h5 class="text-uppercase font-weight-bold wow fadeIn" data-wow-delay="0.4s"><mark>Full Stack .NET Developer</mark></h5>
+                                <a href="#about" class="btn btn-floating btn-large wow fadeIn" data-wow-delay="0.4s" data-offset="100"><i class="fas fa-angle-down" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!--/Navigation & Intro-->
+    <!--Main layout-->
+    <main>
+
+        <!-- First container -->
+        <div class="container">
+
+            <!-- Section About -->
+            <section id="about" class="section feature-box mb-5">
+
+                <!-- Section title -->
+                <h2 class="text-center text-uppercase my-5 pt-5 wow fadeIn" data-wow-delay="0.2s">About <strong>me</strong></h2>
+
+                <p class="text-center w-responsive mx-auto wow fadeIn my-5" data-wow-delay="0.2s">I am an enthusiastic programmer who enjoys taking on new challenges and learning new technologies. </p>
+
+                <!-- First row -->
+                <!--<div class="row features-big text-center wow fadeIn" data-wow-delay="0.4s">-->
+
+                    <!-- First column -->
+                    <!--<div class="col-md-4 mb-5">-->
+
+                        <!--Panel-->
+                        <!--<div class="card card-body hoverable">
+                            <i class="fas fa-laptop fa-3x mb-4" aria-hidden="true"></i>
+                            <h5 class="font-weight-bold text-uppercase mb-4">Freelancer</h5>
+                            <p class="dark-grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>-->
+                        <!--/.Panel-->
+
+                    <!--</div>-->
+                    <!-- /First column -->
+                    <!-- Second column -->
+                    <!--<div class="col-md-4 mb-5">-->
+
+                        <!--Panel-->
+                        <!--<div class="card card-body yellow hoverable">
+                            <i class="fas fa-code fa-3x mb-4" aria-hidden="true"></i>
+                            <h5 class="font-weight-bold text-uppercase mb-4">Developer</h5>
+                            <p class="dark-grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>-->
+                        <!--/.Panel-->
+
+                    <!--</div>-->
+                    <!-- /.Second column -->
+                    <!-- Third column -->
+                    <!--<div class="col-md-4 mb-5">-->
+
+                        <!--Panel-->
+                        <!--<div class="card card-body hoverable">
+                            <i class="fas fa-pencil-alt fa-3x mb-4" aria-hidden="true"></i>
+                            <h5 class="font-weight-bold text-uppercase mb-4">Designer</h5>
+                            <p class="dark-grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>-->
+                        <!--/.Panel-->
+
+                    <!--</div>-->
+                    <!-- /.Third column -->
+
+                <!--</div>-->
+                <!-- /.First row -->
+
+            </section>
+            <!-- /.Second section -->
+
+        </div>
+        <!-- /.First container -->
+        <!--Second container-->
+        <div class="container-fluid" style="background-color: #f3f3f5;">
+            <div class="container py-4 pt-4">
+
+                <!-- Second section -->
+                <section id="skills">
+
+                    <!-- First row -->
+                    <div class="row py-5">
+
+                        <!--First column-->
+                        <div class="col-lg-6 col-md-12 mb-3 wow fadeIn" data-wow-delay="0.4s">
+
+                            <!--Section heading-->
+                            <div class="d-flex justify-content-start">
+                                <h4 class="text-center text-uppercase mb-5 pb-3 mt-4 wow fadeIn" data-wow-delay="0.2s">My <strong>experience</strong></h4>
+                            </div>
+
+                            <!--Description-->
+                            <blockquote class="blockquote bq-warning mb-4">
+                                <div class="row">
+                                    <i class="fas fa-briefcase fa-x mb-1 mr-3 ml-3" aria-hidden="true"></i>
+                                    <h5 class="font-weight-bold mb-3">Freelance Software developer</h5>
+                                </div>
+                                <p class="font-weight-bold ml-1 dark-grey-text mb-2">May, 2015 - Present (4 years)</p>
+                                <p class="mb-0 ml-1 light-grey-text">Designed several applications for small businesses. </p>
+                            </blockquote>
+
+                            <blockquote class="blockquote bq-warning mt-1 mb-4">
+                                <div class="row">
+                                    <i class="fas fa-briefcase fa-x mb-1 mr-3 ml-3" aria-hidden="true"></i>
+                                    <h5 class="font-weight-bold mb-3">Desktop Support</h5>
+                                </div>
+                                <p class="font-weight-bold ml-1 dark-grey-text mb-2">January 2000 - May 2015(15 year)</p>
+                                <p class="mb-0 ml-1 light-grey-text">Provided support for software and hardware issues for residential and commercial clients. </p>
+                            </blockquote>
+
+
+                            <div class="text-center text-md-left mt-4"> <a href="/images/Christophe_Madoz_Resume.pdf" target="_blank" class="btn btn-primary" download="">Download My Resume</a> </div>
+                        </div>
+                        <!--/First column-->
+                        <!--Second column-->
+                        <div class="col-lg-5 offset-lg-1 col-md-12 mb-4 wow fadeIn" data-wow-delay="0.4s">
+
+                            <!--Second heading-->
+                            <div class="d-flex justify-content-start">
+                                <h4 class="text-center text-uppercase mb-5 pb-3 mt-4 wow fadeIn" data-wow-delay="0.2s">My <strong>Education</strong></h4>
+                            </div>
+
+                            <!--Description-->
+                            <blockquote class="blockquote bq-warning mb-4">
+                                <div class="row">
+                                    <i class="fas fa-graduation-cap fa-x mb-1 mr-3 ml-3" aria-hidden="true"></i>
+                                    <h5 class="font-weight-bold mb-3">B.S. Computer Science</h5>
+                                </div>
+                                <p class="font-weight-bold ml-1 dark-grey-text mb-2">August, 2012 - May, 2015</p>
+                                <p class="mb-0 ml-1 light-grey-text">University Of North Carolina Greensboro </p>
+                            </blockquote>
+
+
+
+                            <blockquote class="blockquote bq-warning mb-4">
+                                <div class="row">
+                                    <i class="fas fa-graduation-cap fa-x mb-1 mr-3 ml-3" aria-hidden="true"></i>
+                                    <h5 class="font-weight-bold mb-3">A.S. Science</h5>
+                                </div>
+                                <p class="font-weight-bold ml-1 dark-grey-text mb-2">August, 2006 - May, 2008</p>
+                                <p class="mb-0 ml-1 light-grey-text">Davidson County Community College </p>
+                            </blockquote>
+
+                            <blockquote class="blockquote bq-warning mb-4">
+                                <div class="row">
+                                    <i class="fas fa-graduation-cap fa-x mb-1 mr-3 ml-3" aria-hidden="true"></i>
+                                    <h5 class="font-weight-bold mb-3">A.A.S Electronics Engineering</h5>
+                                </div>
+                                <p class="font-weight-bold ml-1 dark-grey-text mb-2">August, 1993 - May, 1995</p>
+                                <p class="mb-0 ml-1 light-grey-text">Davidson County Community College </p>
+                            </blockquote>
+
+
+                            <blockquote class="blockquote bq-warning mb-4">
+                                <div class="row">
+                                    <i class="fas fa-graduation-cap fa-x mb-1 mr-3 ml-3" aria-hidden="true"></i>
+                                    <h5 class="font-weight-bold mb-3">Baccalauréat Mécanique Générale</h5>
+                                </div>
+                                <p class="font-weight-bold ml-1 dark-grey-text mb-2">September, 1986 - July, 1991</p>
+                                <p class="mb-0 ml-1 light-grey-text">Lycee Viette Montbeliard (France) </p>
+                            </blockquote>
+
+                        </div>
+
+                            
+
+                        </div>
+                        <!--/Second column-->
+
+                    
+                    <!--/First row-->
+
+                </section>
+                <!-- /.Second section -->
+
+            </div>
+        </div>
+        <!--/Second container-->
+        <!-- Fourth container -->
+        <div class="container">
+
+            <!-- Fourth section -->
+            <section id="works" class="section mb-5">
+
+                <!--Angular entry point for the application and the webf ppage Angular Entry Point -->
+                <app-root></app-root>
+
+
+                <!-- Section title -->
+                <h2 class="text-center text-uppercase my-5 pt-5 wow fadeIn" data-wow-delay="0.2s">Code <strong>Challenges</strong></h2>
+
+                <!-- Section description -->
+                <!--<p class="text-center w-responsive mx-auto wow fadeIn my-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia iste provident, voluptatum voluptatibus aut modi aspernatur autem impedit, eius, debitis earum voluptatem. Quaerat hic aspernatur laborum magni earum. At, officiis!</p>-->
+                <!-- First row -->
+                <div class="row wow fadeIn" data-wow-delay="0.4s">
+
+                    <!-- First column -->
+                    <div class="col-md-12 mb-5">
+
+                        <!-- Lightbox -->
+                        <div id="mdb-lightbox-ui"></div>
+
+                        <div class="mdb-lightbox">
+
+                            <figure id="projPic1" class="col-md-4" data-toggle="modal" data-target="#myModal" data-target-tab="#menu0">
+                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(63).jpg" data-size="1600x1067">
+
+                                    <img src="images/math_exercises.gif" class="img-fluid z-depth-1" />
+
+                                </a>
+                            </figure>
+
+                            <figure class="col-md-4" data-toggle="modal" data-target="#myModal" data-target-tab="#menu1">
+                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(66).jpg" data-size="1600x1067">
+
+
+                                    <img src="images/factorial_calculation.png" class="img-fluid z-depth-1" />
+                                </a>
+                            </figure>
+
+                            <figure class="col-md-4" data-toggle="modal" data-target="#myModal" data-target-tab="#menu2">
+                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(65).jpg" data-size="1600x1067">
+
+                                    <img src="images/palindrome_challenge.gif" class="img-fluid z-depth-1" />
+
+                                </a>
+                            </figure>
+
+                            <figure class="col-md-4" data-toggle="modal" data-target="#myModal" data-target-tab="#menu3">
+                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(67).jpg" data-size="1600x1067">
+
+                                    <img src="images/FizzBuzz.png" class="img-fluid z-depth-1" />
+
+
+                                </a>
+                            </figure>
+
+                            <figure class="col-md-4" data-toggle="modal" data-target="#myModal" data-target-tab="#menu4">
+                                <a href="https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20(68).jpg" data-size="1600x1067">
+                                    <img src="images/all_fears.png" class="img-fluid z-depth-1" />
+                                </a>
+                            </figure>
+
+
+
+
+                        </div>
+                        <!-- /.Lightbox -->
+
+                    </div>
+                    <!-- /.First column -->
+
+                </div>
+                <!-- /.First row -->
+
+            </section>
+            <section id="projects" class="section mb-5">
+                <h2 class="text-center text-uppercase my-5 pt-5 wow fadeIn" data-wow-delay="0.2s">My <strong>projects</strong></h2>
+
+                <!-- Section description -->
+                <!--<p class="text-center w-responsive mx-auto wow fadeIn my-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia iste provident, voluptatum voluptatibus aut modi aspernatur autem impedit, eius, debitis earum voluptatem. Quaerat hic aspernatur laborum magni earum. At, officiis!</p>-->
+                <!-- First row -->
+                <div class="row wow fadeIn" data-wow-delay="0.4s">
+
+                    <!-- First column -->
+                    <div class="col-md-12 mb-5">
+
+                        <!-- Lightbox -->
+                        <div id="mdb-lightbox-ui"></div>
+
+                        <div class="mdbd-lightbox">
+
+                            <div class="row ">
+
+                                <div class="col-md-4 text-right " style="padding:0; ">
+                                    <a href="https://mcbugtracker.azurewebsites.net/" target="_blank">
+                                        <img class="box_project" src="images/bug_tracker_app.png" style="padding:0;width:350px;" />
+                                    </a>
+                                </div>
+
+                                <div class="col-md-4" style=" id="web_api_app" data-toggle="modal" data-target="#modalAPI" data-target-tab="#menu4">
+                                    <img class="box_project" src="images/weather_app.png" style="padding:0;width:350px;" />
+                                </div>
+
+                                <div class="col-md-4 text-left" style="padding:0;">
+                                    <a href="https://madozdevblog.azurewebsites.net/" target="_blank">
+                                        <img class="box_project" src="images/MyBlog.png" style="margin-right:10px;width:350px;" />
+                                    </a>
+                                </div>
+
+
+                            </div>
+
+                            <div class="row mt-3 ">
+
+                                <div class="col-md-4 text-right " style="padding:0; ">
+                                    <a href="https://finappphasetwo.azurewebsites.net/" target="_blank">
+                                        <img class="box_project" src="images/my_api.png" style="padding:0;width:350px;" />
+                                    </a>
+                                </div>
+
+                                <div class="col-md-4" >
+                                    <a href="https://madozdevfinportal.azurewebsites.net/" target="_blank">
+                                        <img class="box_project" src="images/financial_portal.png" style="padding:0;width:350px;" />
+                                    </a>
+                                 
+                                </div>
+
+
+
+                            </div>
+
+
+
+
+
+                        </div>
+                        <!-- /.Lightbox -->
+
+                    </div>
+                    <!-- /.First column -->
+
+                </div>
+                <!-- /.First row -->
+
+            </section>
+            <!-- /.Fourth section -->
+
+            <hr>
+
+        </div>
+        <!-- /.Fourth container -->
+        <!-- Contact form -->
+        <div id="contact" class="container">
+
+            <!--Section: Contact v.2-->
+            <section class="section contact-section mt-4 mb-5">
+                <!--Section heading-->
+                <h2 class="text-center text-uppercase my-5 pt-5 wow fadeIn" data-wow-delay="0.2s">Contact <strong>me</strong></h2>
+                <!--Section Contact-->
+                <p class="text-center w-responsive mx-auto mb-5 pb-4 wow fadeIn" data-wow-delay="0.2s">Please fill the contact form below and send me your message and I will get back in touch with you as soon as possible. You can also call me during business hours. Thank you. </p>
+                <div class="row wow fadeIn" data-wow-delay="0.4s">
+
+                    <!--First column-->
+                    <div class="col-md-8 mb-5">
+                        <form id="myFormEmail">
+                            <!--First row-->
+                            <div class="row">
+
+                                <!--First column-->
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <div class="md-form mb-0">
+                                            <input type="text" id="name" name="name" class="form-control" >
+                                            <label for="form41" class="">Your name</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Second column-->
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <div class="md-form mb-0">
+                                            <input type="text" id="email" name="email" class="form-control" >
+                                            <label for="form52" class="">Your email</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/.First row-->
+                            <!--Second row-->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="subject" name="subject" class="form-control" >
+                                        <label for="form51" class="">Subject</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/Second row-->
+                            <!--Third row-->
+                            <div class="row">
+                                <!--First column-->
+                                <div class="col-md-12">
+                                    <div class="md-form mb-0">
+                                        <textarea type="text" id="body" name="body" class="md-textarea form-control" rows="3" ></textarea>
+                                        <label for="form76">Your message</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/.Third row-->
+                        </form>
+                        <div class="text-center text-md-left mt-4"> <a class="btn btn-primary" id="sendEmail">Send</a> </div>
+                    </div>
+                    <!--.First column-->
+                    <!--Second column-->
+                    <div class="col-md-4">
+                        <ul class="contact-icons list-unstyled text-center">
+
+                            <li>
+                                <i class="fas fa-envelope fa-2x"></i>
+                                <p>madozc@gmail.com</p>
+                            </li>
+                        </ul>
+                        <div id="message"></div>
+                    </div>
+                   
+                    <!--.Second column-->
+                </div>
+
+            </section>
+            <!--/Section: Contact v.2-->
+
+        </div>
+        <!-- Contact form -->
+
+        <div class="streak1">
+            <div class="flex-center">
+                <ul class="list-unstyled">
+                    <li><h2 class="h2-responsive mt-5 wow fadeIn">Want an outstanding project?</h2></li>
+                    <li><h5 class="h5-responsive wow fadeIn" data-wow-delay="0.2s">Just send me a message!</h5></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- /.Customers carousel -->
+
+    </main>
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script src="content/js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script src="content/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="content/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script src="content/js/mdb.min.js"></script>
+    <script src="content/js/projects.js"></script>
+    <script src="content/js/wow.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9811_bTr_LFxMpe06ZAxBuJiQDn3VHV8&callback=initMap"></script>
+    <script src="content/js/api_functions.js"></script>
+    <script src="content/js/sweetalert2.all.min.js"></script>
+
+    <script src="content/js/SyntaxHighlighter/scripts/shCore.js"></script>
+    <script src="content/js/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9811_bTr_LFxMpe06ZAxBuJiQDn3VHV8">
+    </script>
+    <script src="Scripts/jquery.validate.min.js"></script>
+    <script src="Scripts/additional-methods.min.js"></script>
+    <script src="https://unpkg.com/vue@2.5.3"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.35.4/js/bootstrap-dialog.min.js"></script>
+    <script src="Scripts/smtp.js"></script>
+
+    <!-- Load the api module for the geolocation    -->
+
+
+    <script>
+
+
+        $(document).ready(function () {
+            $("#formCalculations").validate({
+                rules: {
+                    num1: {
+                        required: true,
+                        number: true,
+                        min: 1
+                    },
+                    num2: {
+                        required: true,
+                        number: true,
+                        min: 1
+                    },
+                    num3: {
+                        required: true,
+                        number: true,
+                        min: 1
+                    },
+                    num4: {
+                        required: true,
+                        number: true,
+                        min: 1
+                    },
+                    num5: {
+                        required: true,
+                        number: true,
+                        min: 1
+                    },
+                    factorialNum: {
+                        required: true,
+                        number: true,
+                        min: 1
+                    },
+                    palText: {
+                        required: true
+                    }
+
+                },//End of rules for validation form
+
+                messages: {
+                    num1: {
+                        required: "<span style=\"color:red;\">Please enter a number.</span>",
+                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
+                        min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
+                    },
+                    num2: {
+                        required: "<span style=\"color:red;\">Please enter a number.</span>",
+                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
+                        min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
+                    },
+                    num3: {
+                        required: "<span style=\"color:red;\">Please enter a number.</span>",
+                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
+                        min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
+                    },
+                    num4: {
+                        required: "<span style=\"color:red;\">Please enter a number.</span>",
+                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
+                        min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
+                    },
+                    num5: {
+                        required: "<span style=\"color:red;\">Please enter a number.</span>",
+                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
+                        min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
+                    },
+                    factorialNum: {
+                        required: "<span style=\"color:red;\">Please enter a number.</span>",
+                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
+                        min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
+                    },
+                    palText: {
+                        required: "<span style=\"color:red;\">Please enter a string.</span>"
+
+                    }
+
+                }
+
+            });
+
+
+            $("#factorialForm").validate({
+                rules: {
+
+                    factorialNum: {
+                        required: true,
+                        number: true,
+                        min: 1
+                    }
+
+                },//End of rules for validation form
+
+                messages: {
+
+                    factorialNum: {
+                        required: "<span style=\"color:red;\">Please enter a number.</span>",
+                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
+                        min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
+                    }
+
+                }
+
+            });
+
+            $("#palindromeForm").validate({
+                rules: {
+
+                    palText: {
+                        required: true,
+                        minlength:2
+
+                    }
+
+                },//End of rules for validation form
+
+                messages: {
+
+                    palText: {
+                        required: "<span style=\"color:red;\">Please enter a string.</span>",
+                         minlength: "<span style=\"color:red;\">Enter a string with more than 2 characters.</span>"
+                    }
+
+                }
+
+            });
+
+            $("#fizzbuzzForm").validate({
+                rules: {
+
+                    txtFibNum1: {
+                        required: true,
+                        number: true,
+                        min: 1
+
+                    },
+                    txtFibNum2: {
+                        required: true,
+                        number: true,
+                        min: 1
+                    }
+
+
+                },//End of rules for validation form
+
+                messages: {
+
+                    txtFibNum1: {
+                        required: "<span style=\"color:red;\">Please enter a number.</span>",
+                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
+                        min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
+
+                    },
+                    txtFibNum2: {
+                        required: "<span style=\"color:red;\">Please enter a number.</span>",
+                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
+                        min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
+
+                    }
+
+                }
+
+            });
+
+            $("#sofForm").validate({
+                rules: {
+
+                    number1: {
+                        required: true,
+                        number: true,
+                        min: 1
+
+                    },
+                    number2: {
+                        required: true,
+                        number: true,
+                        min: 1
+                    },
+                    number3: {
+                        required: true,
+                        number: true,
+                        min: 1
+                    },
+                    number4: {
+                        required: true,
+                        number: true,
+                        min: 1
+                    },
+                    number5: {
+                        required: true,
+                        number: true,
+                         min: 1
+                    },
+                    number6: {
+                        required: true,
+                        number: true,
+                        min: 1
+                    },
+                    kValue: {
+                        required: true,
+                        number: true,
+                        min: 1
+                    }
+
+
+                },//End of rules for validation form
+
+                messages: {
+
+                    number1: {
+                        required: "<span style=\"color:red;\">Please enter a number.</span>",
+                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
+                         min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
+
+                    },
+                    number2: {
+                        required: "<span style=\"color:red;\">Please enter a number.</span>",
+                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
+                         min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
+
+                    },
+                    number3: {
+                        required: "<span style=\"color:red;\">Please enter a number.</span>",
+                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
+                         min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
+
+                    },
+                    number4: {
+                        required: "<span style=\"color:red;\">Please enter a number.</span>",
+                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
+                         min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
+
+                    },
+                    number5: {
+                        required: "<span style=\"color:red;\">Please enter a number.</span>",
+                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
+                         min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
+
+                    },
+                    number6: {
+                        required: "<span style=\"color:red;\">Please enter a number.</span>",
+                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
+                         min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
+
+                    },
+                    kValue: {
+                        required: "<span style=\"color:red;\">Please enter a number.</span>",
+                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
+                         min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
+
+                    }
+
+                }
+
+            });
+
+
+
+
+
+
+
+
+//=============================== Email Section ============================
+
+            $("#myFormEmail").validate({
+                rules: {
+
+                    name: {
+                        required: true,
+                        minlength: 2,
+                       
+                    },
+                    email: {
+                        required: true,
+                        email: true,
+                       
+                    },
+                    subject: {
+                        required: true,
+                        minlength: 2,
+                       
+                    },
+                    body: {
+                        required: true,
+                        minlength: 2,
+                        
+                    }
+
+                },//End of rules for validation form
+                
+                messages: {
+
+                    name: {
+                        //required: "<span style=\"color:red;\">Please enter a name.</span>",
+                        required: "<div class=\"alert alert-danger\" role=\"alert\">The name field is required.</div>",
+                        minlength: "<div class=\"alert alert-danger\" role=\"alert\">The name is too short, 2 characters minimum.</div>",
+                        
+                    },
+                    email: {
+                        required: "<div class=\"alert alert-danger\" role=\"alert\">An email is required.</div>",                        
+                        email: "<div class=\"alert alert-danger\" role=\"alert\">Your email address must be in the format of name@domain.com.</div>",
+                         //required: "I need your email address to contact you, thank you.",
+                        //email: "Your email address must be in the format of name@domain.com",
+                       
+                    },
+                    subject: {
+                        required: "<div class=\"alert alert-danger\" role=\"alert\">The subject field is required.</div>",
+                        minlength: "<div class=\"alert alert-danger\" role=\"alert\">Subject is too short, 2 characters minimum</div>",
+                       
+                    },
+                    body: {
+                        required: "<div class=\"alert alert-danger\" role=\"alert\">The body field is required.</div>",
+                        minlength: "<span style=\"color:red;\">The body is too short, 2 characters mininum.</span>",
+                       
+                    }
+
+                },//end messages
+
+                errorElement : 'div',
+    errorLabelContainer: '#message'
+
+           //     errorPlacement: function(error, element) {
+           //         if( element.is(':radio') || element.is(':checkbox')) {
+           //             error.appendTo(element.parent());
+           //         } else {
+           //          error.insertAfter(element);
+           //         }
+           //     },
+           //     showErrors: function(errorMap, errorList) {
+           //    if (submitted) {
+           //       var summary = "You have the following errors: <br/>";
+           //       $.each(errorList, function() { summary += " * " + this.message + "<br/>"; });
+           //       $("#message").html(summary);
+           //       submitted = false;
+           //     }
+           // //--> if you dont want to see the errors in line remove this below line?
+           //this.defaultShowErrors();
+           //     },
+           //        invalidHandler: function(form, validator) {
+           //        submitted = true;
+           //    }
+
+            });
+//==========================================================================
+
+
+
+
+
+
+        });
+
+
+
+
+        $("#sendEmail").click(function () {
+            if ($("#myFormEmail").valid())
+            {
+
+
+              let name = $("#name").val();
+              let email = $("#email").val();
+              let subject = $("#subject").val();
+              let body = $("#body").val();
+
+
+
+                Email.send({
+                    SecureToken: '5a8274e6-a60a-42ff-aea3-874143317bcc',
+                    To: "madozc@gmail.com",
+                    From: email,
+                    Subject: subject,
+                    Body: body
+                }).then
+                    (
+                        //message => alert("Message Sent!")
+                        $("#myFormEmail").each(function () { this.reset() })
+                
+              );
+
+            }
+
+            //if ($("#name").val().length == 0 || $("#email").val().length == 0 || $("#subject").val().length == 0 || $("#body").val().length == 0  )
+            //{
+            //    alert("fuck you");
+            //}
+            //else
+            //{
+
+             
+            //}
+
+
+
+        });
+
+
+        $('#myModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget)
+            $("a[href='" + button.data('target-tab') + "']").tab('show');
+        })
+
+        $('body').scrollspy({
+            target: '.dotted-scrollspy'
+        });
+
+
+        $('.navbar-collapse a').click(function () {
+            $(".navbar-collapse").collapse('hide');
+        });
+
+        /* WOW.js init */
+        new WOW().init();
+
+    </script>
+
+    <script>
+        SyntaxHighlighter.all();
+    </script>
+
+</body>
+</html>

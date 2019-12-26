@@ -1,0 +1,122 @@
+﻿html, body, header, .jarallax {
+    height: 100%;
+}
+
+@media (min-width: 560px) and (max-width: 740px) {
+    html, body, header, .jarallax {
+        height: 600px;
+    }
+}
+
+#home {
+    background-image: url(../../images/gavarni.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#social, #main_menu {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+#main_menu {
+    animation: 1s ease-out 0s 1 slideInFromRight;
+}
+
+
+#map
+{
+ height:20px;
+ border:1px solid red;
+
+
+}
+
+.blueFont {
+    color: blue;
+    font-weight: bold;
+}
+
+.greenFont {
+    color: forestgreen;
+    font-weight: bold;
+}
+
+.redFont{
+    color:red;
+    font-weight:bold;
+}
+.greyFont{
+    color:grey;
+    font-weight:bold;
+}
+
+#sofAnswer {
+    font-weight: bold;
+    color: gray;
+    font-size: 1.8rem;
+}
+
+#facResult{
+    color:grey;
+    font-weight:bold;
+    font-size:1.5rem;
+}
+
+.displayResult{
+    color:grey;
+    font-weight:bold;
+    font-size:1.5rem;
+}
+
+.mathResult {
+    color: darkgreen;
+    font-weight: bold;
+    font-size: large;
+}
+
+.palResult {
+    color: forestgreen;
+    font-weight: bold;
+    font-size: large;
+}
+
+pre {
+    overflow: auto;
+    width: 100px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+
+
+/*==============================      ANIMATION SECTION     =====================================  */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-10%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(30%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/*   ================================     GELOLOCATION API AND WEATHER =============================  */
+
+
