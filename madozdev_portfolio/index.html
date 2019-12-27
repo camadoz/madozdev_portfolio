@@ -39,6 +39,50 @@
         .box_project:hover{
             cursor:pointer;
         }
+
+
+
+        @media only screen and (max-width: 400px)
+        {
+           .left_picture{
+               text-align:center;
+               margin-bottom:15px;
+           }
+
+           .right_picture{
+               text-align:center;
+               margin-bottom:15px;
+           }
+
+           .center_picture{
+               text-align:center;
+               margin-bottom:15px;
+           }
+
+           .bottom_row{
+               margin-top:0px;
+           }
+        }
+
+        @media only screen and (min-width: 401px)
+        {
+           .left_picture{
+               text-align:right;
+           }
+
+           .right_picture{
+               text-align:left;
+           }
+
+           .center_picture{
+               text-align:center;
+           }
+
+           .bottom_row{
+               margin-top:15px;
+           }
+        }
+
     </style>
 
 </head>
@@ -1395,7 +1439,8 @@ $("#btnClearForm").click(() => {
                     <div class="row smooth-scroll">
                         <div class="col-md-12 pt-3">
                             <div class="white-text text-center pt-5">
-                                <h1 class="display-2 mb-4 dark-grey-text wow fadeIn">I am <strong>Christophe Madoz</strong></h1>
+                                <span style="font-size:4.5rem; color:#464646; " class="wow fadeIn">I am <strong>Christophe Madoz</strong></span>
+                                <!--<h1 class="display-2 mb-4 dark-grey-text wow fadeIn">I am <strong>Christophe Madoz</strong></h1>-->
                                 <h5 class="text-uppercase font-weight-bold wow fadeIn" data-wow-delay="0.4s"><mark>Full Stack .NET Developer</mark></h5>
                                 <a href="#about" class="btn btn-floating btn-large wow fadeIn" data-wow-delay="0.4s" data-offset="100"><i class="fas fa-angle-down" aria-hidden="true"></i></a>
                             </div>
@@ -1555,7 +1600,7 @@ $("#btnClearForm").click(() => {
                             <blockquote class="blockquote bq-warning mb-4">
                                 <div class="row">
                                     <i class="fas fa-graduation-cap fa-x mb-1 mr-3 ml-3" aria-hidden="true"></i>
-                                    <h5 class="font-weight-bold mb-3">Baccalauréat Mécanique Générale</h5>
+                                    <h5 class="font-weight-bold mb-3">Baccalauréat Mécanique</h5>
                                 </div>
                                 <p class="font-weight-bold ml-1 dark-grey-text mb-2">September, 1986 - July, 1991</p>
                                 <p class="mb-0 ml-1 light-grey-text">Lycee Viette Montbeliard (France) </p>
@@ -1673,34 +1718,34 @@ $("#btnClearForm").click(() => {
 
                             <div class="row ">
 
-                                <div class="col-md-4 text-right " style="padding:0; ">
+                                <div class="col-md-4 left_picture" style="padding:0;">
                                     <a href="https://mcbugtracker.azurewebsites.net/" target="_blank">
                                         <img class="box_project" src="images/bug_tracker_app.png" style="padding:0;width:350px;" />
                                     </a>
                                 </div>
 
-                                <div class="col-md-4" style=" id="web_api_app" data-toggle="modal" data-target="#modalAPI" data-target-tab="#menu4">
+                                <div class="col-md-4 center_picture"  id="web_api_app" data-toggle="modal" data-target="#modalAPI" data-target-tab="#menu4">
                                     <img class="box_project" src="images/weather_app.png" style="padding:0;width:350px;" />
                                 </div>
 
-                                <div class="col-md-4 text-left" style="padding:0;">
+                                <div class="col-md-4 right_picture" style="padding:0;">
                                     <a href="https://madozdevblog.azurewebsites.net/" target="_blank">
-                                        <img class="box_project" src="images/MyBlog.png" style="margin-right:10px;width:350px;" />
+                                        <img class="box_project" src="images/MyBlog.png" style="width:350px;" />
                                     </a>
                                 </div>
 
 
                             </div>
 
-                            <div class="row mt-3 ">
+                            <div class="row bottom_row">
 
-                                <div class="col-md-4 text-right " style="padding:0; ">
+                                <div class="col-md-4 left_picture" style="padding:0; ">
                                     <a href="https://finappphasetwo.azurewebsites.net/" target="_blank">
                                         <img class="box_project" src="images/my_api.png" style="padding:0;width:350px;" />
                                     </a>
                                 </div>
 
-                                <div class="col-md-4" >
+                                <div class="col-md-4 center_picture" >
                                     <a href="https://madozdevfinportal.azurewebsites.net/" target="_blank">
                                         <img class="box_project" src="images/financial_portal.png" style="padding:0;width:350px;" />
                                     </a>
