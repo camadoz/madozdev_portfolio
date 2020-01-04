@@ -42,21 +42,11 @@
 
 
 
-        @media only screen and (max-width: 400px)
+        @media only screen and (max-width: 800px)
         {
-           .left_picture{
+           .left_picture, .right_picture,.center_picture{
                text-align:center;
-               margin-bottom:15px;
-           }
-
-           .right_picture{
-               text-align:center;
-               margin-bottom:15px;
-           }
-
-           .center_picture{
-               text-align:center;
-               margin-bottom:15px;
+               margin-bottom:105px;
            }
 
            .bottom_row{
@@ -64,7 +54,7 @@
            }
         }
 
-        @media only screen and (min-width: 401px)
+        @media only screen and (min-width: 801px)
         {
            .left_picture{
                text-align:right;
@@ -324,7 +314,7 @@ $("#btnClearForm").click(() => {
             factorialNumber--;
         }
 
-        $("#palResult").html("The factorial of " + initialNumber + " is <span class=\"red\">" + result + "</span>");
+        $("#palResult").html("The factorial of " + initialNumber + " is <span class="red">" + result + "</span>");
     }
 });
 
@@ -436,7 +426,7 @@ $("#btnCheckPal").click(() => {
         //Once the string is reversed, compare it to the initial string. 
         if (initalText.localeCompare(parseText) == 0)
         {
-            $("#palAnswer").html("The result after reversing " + initalText + " is <span class=\"palResult\">" + parseText + "</span>");
+            $("#palAnswer").html("The result after reversing " + initalText + " is <span class="palResult">" + parseText + "</span>");
             $("#palMessage").addClass("show");
             $("#palMessage").removeClass("hide");
 
@@ -446,7 +436,7 @@ $("#btnCheckPal").click(() => {
         else
         
         {
-            $("#palAnswer").html("The result after reversing " + initalText + " is <span class=\"mathResult\">" + parseText + "</span>");
+            $("#palAnswer").html("The result after reversing " + initalText + " is <span class="mathResult">" + parseText + "</span>");
             $("#palFailMessage").addClass("show");
             $("#palFailMessage").removeClass("hide");
 
@@ -561,15 +551,15 @@ $("#btnFbStart").click(() => {
         {
             if ((i % number1 == 0) && (i % number2 == 0))
             {
-                strResultFb += "<span class=\"red\">FizzBuzz</span>";
+                strResultFb += "<span class="red">FizzBuzz</span>";
             }
             else if (i % number1 == 0)
             {
-                strResultFb += "<span class=\"green\">Fizz</span>";
+                strResultFb += "<span class="green">Fizz</span>";
             }
             else if (i % number2 == 0)
             {
-                strResultFb += "<span class=\"blue\">Buzz</span>";
+                strResultFb += "<span class="blue">Buzz</span>";
             }
             else
             {
@@ -759,7 +749,7 @@ $("#btnSOFStart").click(() => {
                       if (numbList[i] + numbList[j] == kValue) {
                           //Display result
                           clearSOFfields();
-                          $("#sofAnswer").append($.parseHTML(kValue + " was found by adding array member <span class=\"red\">" + numbList[i] + "</span> and <span class=\"red\">" + numbList[j] + "</span>"));
+                          $("#sofAnswer").append($.parseHTML(kValue + " was found by adding array member <span class="red">" + numbList[i] + "</span> and <span class="red">" + numbList[j] + "</span>"));
                           foundSet = true;
                       }
                       //Exit all loops if set is found.
@@ -846,7 +836,7 @@ function clearSOFfields() {
                                                     
                                                         <div class="col-md-6" >
                                                             <div class="row">
-                                                                <div class="col-md-4 h4" "><span>Latitude: </span> </div>
+                                                                <div class="col-md-4 h4"><span>Latitude: </span> </div>
                                                                 <div class="col-md-8 text-left h4"><span style="color:darkgreen" id="txtLatitude"></span></div>
                                                             </div>
                                                         </div>
@@ -1708,67 +1698,56 @@ $("#btnClearForm").click(() => {
                 <!-- First row -->
                 <div class="row wow fadeIn" data-wow-delay="0.4s">
 
-                    <!-- First column -->
-                    <div class="col-md-12 mb-5">
+
+                    <div class="col-md-12 mb-5 text-left">
 
                         <!-- Lightbox -->
                         <div id="mdb-lightbox-ui"></div>
 
-                        <div class="mdbd-lightbox">
+                        <div class="mdb-lightbox">
 
-                            <div class="row ">
+                            <figure id="projPic2" class="col-md-4">
+                                <a href="https://mcbugtracker.azurewebsites.net/" id="bugTrackerApp" data-size="1600x1067">
 
-                                <div class="col-md-4 left_picture" style="padding:0;">
-                                    <a href="https://mcbugtracker.azurewebsites.net/" target="_blank">
-                                        <img class="box_project" src="images/bug_tracker_app.png" style="padding:0;width:350px;" />
-                                    </a>
-                                </div>
+                                    <img src="images/bug_tracker_app.png" class="img-fluid z-depth-1" />
 
-                                <div class="col-md-4 center_picture"  id="web_api_app" data-toggle="modal" data-target="#modalAPI" data-target-tab="#menu4">
-                                    <img class="box_project" src="images/weather_app.png" style="padding:0;width:350px;" />
-                                </div>
+                                </a>
+                            </figure>
 
-                                <div class="col-md-4 right_picture" style="padding:0;">
-                                    <a href="https://madozdevblog.azurewebsites.net/" target="_blank">
-                                        <img class="box_project" src="images/MyBlog.png" style="width:350px;" />
-                                    </a>
-                                </div>
+                            <figure class="col-md-4" data-toggle="modal" data-target="#modalAPI" data-target-tab="#menu4">
+                                <a href="" id="testLdight" data-size="1600x1067">
 
+                                    <img src="images/weather_app.png" class="img-fluid z-depth-1" />
+                                </a>
+                            </figure>
 
-                            </div>
+                            <figure class="col-md-4">
+                                <a href="https://madozdevblog.azurewebsites.net/" id="MyApi" data-size="1600x1067">
 
-                            <div class="row bottom_row">
+                                    <img src="images/my_api.png" class="img-fluid z-depth-1" />
 
-                                <div class="col-md-4 left_picture" style="padding:0; ">
-                                    <a href="https://finappphasetwo.azurewebsites.net/" target="_blank">
-                                        <img class="box_project" src="images/my_api.png" style="padding:0;width:350px;" />
-                                    </a>
-                                </div>
+                                </a>
+                            </figure>
 
-                                <div class="col-md-4 center_picture" >
-                                    <a href="https://madozdevfinportal.azurewebsites.net/" target="_blank">
-                                        <img class="box_project" src="images/financial_portal.png" style="padding:0;width:350px;" />
-                                    </a>
-                                 
-                                </div>
-
-
-
-                            </div>
-
-
-
-
-
+                            <figure class="col-md-4">
+                                <a href="" id="blogApp" data-size="1600x1067">
+                                    <img src="images/MyBlog.png" class="img-fluid z-depth-1" />
+                                </a>
+                            </figure>
+                            <figure class="col-md-4">
+                                <a href="" id="financialApp" data-size="1600x1067">
+                                    <img src="images/financial_portal.png" class="img-fluid z-depth-1" />
+                                </a>
+                            </figure>
                         </div>
                         <!-- /.Lightbox -->
+                        <!--   TESTING SECTION  -->
 
-                    </div>
-                    <!-- /.First column -->
+
 
                 </div>
                 <!-- /.First row -->
-
+                    </div>
             </section>
             <!-- /.Fourth section -->
 
@@ -1905,6 +1884,31 @@ $("#btnClearForm").click(() => {
 
 
         $(document).ready(function () {
+
+            $("#bugTrackerApp").click(function () {
+                var url = "https://mcbugtracker.azurewebsites.net/";
+                window.open(url, '_blank');
+            });
+
+            
+            $("#blogApp").click(function () {
+                var url = "https://madozdevblog.azurewebsites.net/";
+                window.open(url, '_blank');
+            });
+
+            
+
+           $("#financialApp").click(function () {
+                var url = "https://madozdevfinportal.azurewebsites.net/";
+                window.open(url, '_blank');
+            });
+
+
+            $("#MyApi").click(function () {
+                var url = "https://finappphasetwo.azurewebsites.net/";
+                window.open(url, '_blank');
+            });
+
             $("#formCalculations").validate({
                 rules: {
                     num1: {
