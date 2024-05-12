@@ -1529,6 +1529,15 @@ $("#btnClearForm").click(() => {
                             <blockquote class="blockquote bq-warning mb-4">
                                 <div class="row">
                                     <i class="fas fa-briefcase fa-x mb-1 mr-3 ml-3" aria-hidden="true"></i>
+                                    <h5 class="font-weight-bold mb-3">Senior Web developer</h5>
+                                </div>
+                                <p class="font-weight-bold ml-1 dark-grey-text mb-2">July, 2019 - March 2024 (3 1/2 years)</p>
+                                <p class="mb-0 ml-1 light-grey-text">Add new features to current web applications. Refactor old web application to new Blazor sap application. </p>
+                            </blockquote>
+
+                            <blockquote class="blockquote bq-warning mb-4">
+                                <div class="row">
+                                    <i class="fas fa-briefcase fa-x mb-1 mr-3 ml-3" aria-hidden="true"></i>
                                     <h5 class="font-weight-bold mb-3">Freelance Software developer</h5>
                                 </div>
                                 <p class="font-weight-bold ml-1 dark-grey-text mb-2">May, 2015 - Present (9 years)</p>
@@ -1786,6 +1795,12 @@ $("#btnClearForm").click(() => {
 
                     <!--First column-->
                     <div class="col-md-8 mb-5">
+                        <div id="email_success" class="alert alert-success" role="alert">
+                            Your email was sent successfully. Thank you!
+                        </div>
+                        <div id="email_fail" class="alert alert-danger" role="alert">
+                            An error occured and we could not send your email. Please try again later!
+                        </div>
                         <form id="myFormEmail">
                             <!--First row-->
                             <div class="row">
@@ -1794,7 +1809,7 @@ $("#btnClearForm").click(() => {
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
                                         <div class="md-form mb-0">
-                                            <input type="text" id="name" name="name" class="form-control" >
+                                            <input type="text" id="name" name="name" class="form-control">
                                             <label for="form41" class="">Your name</label>
                                         </div>
                                     </div>
@@ -1803,7 +1818,7 @@ $("#btnClearForm").click(() => {
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
                                         <div class="md-form mb-0">
-                                            <input type="text" id="email" name="email" class="form-control" >
+                                            <input type="text" id="email" name="email" class="form-control">
                                             <label for="form52" class="">Your email</label>
                                         </div>
                                     </div>
@@ -1814,7 +1829,7 @@ $("#btnClearForm").click(() => {
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="md-form mb-0">
-                                        <input type="text" id="subject" name="subject" class="form-control" >
+                                        <input type="text" id="subject" name="subject" class="form-control">
                                         <label for="form51" class="">Subject</label>
                                     </div>
                                 </div>
@@ -1825,14 +1840,15 @@ $("#btnClearForm").click(() => {
                                 <!--First column-->
                                 <div class="col-md-12">
                                     <div class="md-form mb-0">
-                                        <textarea type="text" id="body" name="body" class="md-textarea form-control" rows="3" ></textarea>
+                                        <textarea type="text" id="body" name="body" class="md-textarea form-control" rows="3"></textarea>
                                         <label for="form76">Your message</label>
                                     </div>
                                 </div>
                             </div>
                             <!--/.Third row-->
+                            <div class="text-center text-md-left mt-4"> <a class="btn btn-primary" id="sendEmail">Send</a> </div>
                         </form>
-                        <div class="text-center text-md-left mt-4"> <a class="btn btn-primary" id="sendEmail">Send</a> </div>
+                        
                     </div>
                     <!--.First column-->
                     <!--Second column-->
@@ -1894,456 +1910,7 @@ $("#btnClearForm").click(() => {
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.35.4/js/bootstrap-dialog.min.js"></script>
     <script src="Scripts/smtp.js"></script>
-
-    <!-- Load the api module for the geolocation    -->
-
-
-    <script>
-
-
-        $(document).ready(function () {
-
-            $("#bugTrackerApp").click(function () {
-                var url = "https://mcbugtracker.azurewebsites.net/";
-                window.open(url, '_blank');
-            });
-
-            
-            $("#blogApp").click(function () {
-                var url = "https://madozdevblog.azurewebsites.net/";
-                window.open(url, '_blank');
-            });
-
-            
-
-           $("#financialApp").click(function () {
-                var url = "https://madozdevfinportal.azurewebsites.net/";
-                window.open(url, '_blank');
-            });
-
-
-            $("#MyApi").click(function () {
-                var url = "https://finappphasetwo.azurewebsites.net/";
-                window.open(url, '_blank');
-            });
-
-            $("#formCalculations").validate({
-                rules: {
-                    num1: {
-                        required: true,
-                        number: true,
-                        min: 1
-                    },
-                    num2: {
-                        required: true,
-                        number: true,
-                        min: 1
-                    },
-                    num3: {
-                        required: true,
-                        number: true,
-                        min: 1
-                    },
-                    num4: {
-                        required: true,
-                        number: true,
-                        min: 1
-                    },
-                    num5: {
-                        required: true,
-                        number: true,
-                        min: 1
-                    },
-                    factorialNum: {
-                        required: true,
-                        number: true,
-                        min: 1
-                    },
-                    palText: {
-                        required: true
-                    }
-
-                },//End of rules for validation form
-
-                messages: {
-                    num1: {
-                        required: "<span style=\"color:red;\">Please enter a number.</span>",
-                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
-                        min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
-                    },
-                    num2: {
-                        required: "<span style=\"color:red;\">Please enter a number.</span>",
-                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
-                        min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
-                    },
-                    num3: {
-                        required: "<span style=\"color:red;\">Please enter a number.</span>",
-                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
-                        min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
-                    },
-                    num4: {
-                        required: "<span style=\"color:red;\">Please enter a number.</span>",
-                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
-                        min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
-                    },
-                    num5: {
-                        required: "<span style=\"color:red;\">Please enter a number.</span>",
-                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
-                        min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
-                    },
-                    factorialNum: {
-                        required: "<span style=\"color:red;\">Please enter a number.</span>",
-                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
-                        min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
-                    },
-                    palText: {
-                        required: "<span style=\"color:red;\">Please enter a string.</span>"
-
-                    }
-
-                }
-
-            });
-
-
-            $("#factorialForm").validate({
-                rules: {
-
-                    factorialNum: {
-                        required: true,
-                        number: true,
-                        min: 1
-                    }
-
-                },//End of rules for validation form
-
-                messages: {
-
-                    factorialNum: {
-                        required: "<span style=\"color:red;\">Please enter a number.</span>",
-                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
-                        min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
-                    }
-
-                }
-
-            });
-
-            $("#palindromeForm").validate({
-                rules: {
-
-                    palText: {
-                        required: true,
-                        minlength:2
-
-                    }
-
-                },//End of rules for validation form
-
-                messages: {
-
-                    palText: {
-                        required: "<span style=\"color:red;\">Please enter a string.</span>",
-                         minlength: "<span style=\"color:red;\">Enter a string with more than 2 characters.</span>"
-                    }
-
-                }
-
-            });
-
-            $("#fizzbuzzForm").validate({
-                rules: {
-
-                    txtFibNum1: {
-                        required: true,
-                        number: true,
-                        min: 1
-
-                    },
-                    txtFibNum2: {
-                        required: true,
-                        number: true,
-                        min: 1
-                    }
-
-
-                },//End of rules for validation form
-
-                messages: {
-
-                    txtFibNum1: {
-                        required: "<span style=\"color:red;\">Please enter a number.</span>",
-                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
-                        min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
-
-                    },
-                    txtFibNum2: {
-                        required: "<span style=\"color:red;\">Please enter a number.</span>",
-                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
-                        min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
-
-                    }
-
-                }
-
-            });
-
-            $("#sofForm").validate({
-                rules: {
-
-                    number1: {
-                        required: true,
-                        number: true,
-                        min: 1
-
-                    },
-                    number2: {
-                        required: true,
-                        number: true,
-                        min: 1
-                    },
-                    number3: {
-                        required: true,
-                        number: true,
-                        min: 1
-                    },
-                    number4: {
-                        required: true,
-                        number: true,
-                        min: 1
-                    },
-                    number5: {
-                        required: true,
-                        number: true,
-                         min: 1
-                    },
-                    number6: {
-                        required: true,
-                        number: true,
-                        min: 1
-                    },
-                    kValue: {
-                        required: true,
-                        number: true,
-                        min: 1
-                    }
-
-
-                },//End of rules for validation form
-
-                messages: {
-
-                    number1: {
-                        required: "<span style=\"color:red;\">Please enter a number.</span>",
-                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
-                         min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
-
-                    },
-                    number2: {
-                        required: "<span style=\"color:red;\">Please enter a number.</span>",
-                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
-                         min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
-
-                    },
-                    number3: {
-                        required: "<span style=\"color:red;\">Please enter a number.</span>",
-                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
-                         min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
-
-                    },
-                    number4: {
-                        required: "<span style=\"color:red;\">Please enter a number.</span>",
-                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
-                         min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
-
-                    },
-                    number5: {
-                        required: "<span style=\"color:red;\">Please enter a number.</span>",
-                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
-                         min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
-
-                    },
-                    number6: {
-                        required: "<span style=\"color:red;\">Please enter a number.</span>",
-                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
-                         min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
-
-                    },
-                    kValue: {
-                        required: "<span style=\"color:red;\">Please enter a number.</span>",
-                        number: "<span style=\"color:red;\">Only numbers are allowed.</span>",
-                         min: "<span style=\"color:red;\">Enter a number greated than 0.</span>"
-
-                    }
-
-                }
-
-            });
-
-
-
-
-
-
-
-
-//=============================== Email Section ============================
-
-            $("#myFormEmail").validate({
-                rules: {
-
-                    name: {
-                        required: true,
-                        minlength: 2,
-                       
-                    },
-                    email: {
-                        required: true,
-                        email: true,
-                       
-                    },
-                    subject: {
-                        required: true,
-                        minlength: 2,
-                       
-                    },
-                    body: {
-                        required: true,
-                        minlength: 2,
-                        
-                    }
-
-                },//End of rules for validation form
-                
-                messages: {
-
-                    name: {
-                        //required: "<span style=\"color:red;\">Please enter a name.</span>",
-                        required: "<div class=\"alert alert-danger\" role=\"alert\">The name field is required.</div>",
-                        minlength: "<div class=\"alert alert-danger\" role=\"alert\">The name is too short, 2 characters minimum.</div>",
-                        
-                    },
-                    email: {
-                        required: "<div class=\"alert alert-danger\" role=\"alert\">An email is required.</div>",                        
-                        email: "<div class=\"alert alert-danger\" role=\"alert\">Your email address must be in the format of name@domain.com.</div>",
-                         //required: "I need your email address to contact you, thank you.",
-                        //email: "Your email address must be in the format of name@domain.com",
-                       
-                    },
-                    subject: {
-                        required: "<div class=\"alert alert-danger\" role=\"alert\">The subject field is required.</div>",
-                        minlength: "<div class=\"alert alert-danger\" role=\"alert\">Subject is too short, 2 characters minimum</div>",
-                       
-                    },
-                    body: {
-                        required: "<div class=\"alert alert-danger\" role=\"alert\">The body field is required.</div>",
-                        minlength: "<span style=\"color:red;\">The body is too short, 2 characters mininum.</span>",
-                       
-                    }
-
-                },//end messages
-
-                errorElement : 'div',
-    errorLabelContainer: '#message'
-
-           //     errorPlacement: function(error, element) {
-           //         if( element.is(':radio') || element.is(':checkbox')) {
-           //             error.appendTo(element.parent());
-           //         } else {
-           //          error.insertAfter(element);
-           //         }
-           //     },
-           //     showErrors: function(errorMap, errorList) {
-           //    if (submitted) {
-           //       var summary = "You have the following errors: <br/>";
-           //       $.each(errorList, function() { summary += " * " + this.message + "<br/>"; });
-           //       $("#message").html(summary);
-           //       submitted = false;
-           //     }
-           // //--> if you dont want to see the errors in line remove this below line?
-           //this.defaultShowErrors();
-           //     },
-           //        invalidHandler: function(form, validator) {
-           //        submitted = true;
-           //    }
-
-            });
-//==========================================================================
-
-
-
-
-
-
-        });
-
-
-
-
-        $("#sendEmail").click(function () {
-            if ($("#myFormEmail").valid())
-            {
-
-
-              let name = $("#name").val();
-              let email = $("#email").val();
-              let subject = $("#subject").val();
-              let body = $("#body").val();
-
-
-
-                Email.send({
-                    SecureToken: '5a8274e6-a60a-42ff-aea3-874143317bcc',
-                    To: "madozc@gmail.com",
-                    From: email,
-                    Subject: subject,
-                    Body: body
-                }).then
-                    (
-                        //message => alert("Message Sent!")
-                        $("#myFormEmail").each(function () { this.reset() })
-                
-              );
-
-            }
-
-            //if ($("#name").val().length == 0 || $("#email").val().length == 0 || $("#subject").val().length == 0 || $("#body").val().length == 0  )
-            //{
-            //    alert("fuck you");
-            //}
-            //else
-            //{
-
-             
-            //}
-
-
-
-        });
-
-
-        $('#myModal').on('show.bs.modal', function (event) {
-            var button = $(event.relatedTarget)
-            $("a[href='" + button.data('target-tab') + "']").tab('show');
-        })
-
-        $('body').scrollspy({
-            target: '.dotted-scrollspy'
-        });
-
-
-        $('.navbar-collapse a').click(function () {
-            $(".navbar-collapse").collapse('hide');
-        });
-
-        /* WOW.js init */
-        new WOW().init();
-
-    </script>
-
-    <script>
-        SyntaxHighlighter.all();
-    </script>
+    <script src="Scripts/site.js"></script>
 
 </body>
 </html>
