@@ -4,7 +4,7 @@ $(document).ready(function () {
     $("#email_fail").hide();
 
     $("#bugTrackerApp").click(function () {
-        var url = "https://mcbugtracker.azurewebsites.net/";
+        var url = "http://66.226.40.133/";
         window.open(url, '_blank');
     });
 
