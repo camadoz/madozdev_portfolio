@@ -78,8 +78,7 @@
 </head>
 <body class="developer">
 
-    <!--                               MODALS                                          -->
-    <!--------------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------- MODALS ----------------------------------------------------------->
     <div id="myModal" class="modal">
         <div class="modal-dialog modal-lg">
             <!-- Modal content-->
@@ -344,7 +343,7 @@ $("#btnFacClear").click(() => {
                                             <div class="row form-group">
 
                                                 <div class="col-md-12">
-                                                    <label for="palText">Enter some text: </label> <input id="palText" name="palText"  class="form-control clearPalField" type="text" />
+                                                    <label for="palText">Enter some text: </label> <input id="palText" name="palText" class="form-control clearPalField" type="text" />
 
                                                 </div>
                                             </div>
@@ -615,7 +614,7 @@ $("#btnClearFB").click(() => {
                                     <div class="row">
                                         <div class="col-lg-12 text-center h2 mt-2 pb-3 border-bottom mb-3 ">Sum Of All Fears  </div>
 
-                                        
+
 
                                         <div class="row">
                                             <div class="col-md-12 text-center h6">
@@ -644,7 +643,7 @@ $("#btnClearFB").click(() => {
                                             </div>
 
                                             <div class="col-md-2">
-                                                <label for="palText">Number 5 </label><input id="number5" name="number5"  min="1" class="form-control clearSOFfield" type="number" />
+                                                <label for="palText">Number 5 </label><input id="number5" name="number5" min="1" class="form-control clearSOFfield" type="number" />
 
                                             </div>
 
@@ -804,6 +803,29 @@ function clearSOFfields() {
 
     <!--                             MODAL GEOLOCATION API TOOLS                                  -->
 
+    <div id="modalBugTrackerApp" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-light">BugTracker Web Application
+                    <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <div>
+                        <p>This project was developed using ASP.NET MVC 5 framework and using C# as the core language. </p>
+                        <p>The ORM Entity framework 3.0 queries directly an Azure database.</p>
+                    </div>
+                    <a class="btn btn-primary" href="http://66.226.40.133/" target="_blank" id="bugTrackerApp" data-size="1600x1067">Open Project</a>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <div id="modalAPI" class="modal">
         <div class="modal-dialog modal-lg">
             <!-- Modal content-->
@@ -814,51 +836,51 @@ function clearSOFfields() {
                 <div class="modal-body">
                     <ul class="nav nav-pills">
                         <li class="nav-item"><a class="nav-link active" data-toggle="pill" href="#home">Weather API Project</a></li>
-                       
-                        
+
+
 
                     </ul>
                     <div class="tab-content">
-                       
+
                         <div id="menu0" class="tab-pane container active ">
                             <!--  TAB ONE   -->
                             <form class="was-validated">
                                 <div class="container-fluid ">
                                     <div class="row ">
                                         <!-- Main Row -->
-                                        <div class="col-lg-12 text-center h2 border-bottom pb-3" >Weather App  </div>
+                                        <div class="col-lg-12 text-center h2 border-bottom pb-3">Weather App  </div>
 
-                                        <div class="col-lg-12 mb-2" >
+                                        <div class="col-lg-12 mb-2">
                                             <!-- first col -->
-                                            
-                                                <div class="row" >
 
-                                                    
-                                                        <div class="col-md-6" >
-                                                            <div class="row">
-                                                                <div class="col-md-4 h4"><span>Latitude: </span> </div>
-                                                                <div class="col-md-8 text-left h4"><span style="color:darkgreen" id="txtLatitude"></span></div>
-                                                            </div>
-                                                        </div>
-                                                   
+                                            <div class="row">
 
-                                                    <div class=" col-md-6">
-                                                        <div class="row">
 
-                                                            <div class="col-md-4 h4"><span >Longitude: </span> </div>
-                                                            <div class="col-md-8 h4"><span style="color:darkgreen" id="txtLongitude"></span></div>
-
-                                                        </div>
+                                                <div class="col-md-6">
+                                                    <div class="row">
+                                                        <div class="col-md-4 h4"><span>Latitude: </span> </div>
+                                                        <div class="col-md-8 text-left h4"><span style="color:darkgreen" id="txtLatitude"></span></div>
                                                     </div>
+                                                </div>
 
-                                                </div> <!-- end of mail col-->
+
+                                                <div class=" col-md-6">
+                                                    <div class="row">
+
+                                                        <div class="col-md-4 h4"><span>Longitude: </span> </div>
+                                                        <div class="col-md-8 h4"><span style="color:darkgreen" id="txtLongitude"></span></div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div> <!-- end of mail col-->
                                         </div>
 
                                         <!-- Second col -->
 
                                         <div class="col-md-12 mb-2">
                                             <div class="col-md-12 text-md-center">
-                                              
+
                                                 <p class="h3" id="txtAddressLocation"></p>
                                             </div>
                                         </div>
@@ -1130,14 +1152,14 @@ $("#btnWeather").click(function () {
 
                 if (results.currently.summary == "Clear") {
 
-                    $("#summary").append("<img src="images/day.svg"  />");
+                    $("#summary").append("<img src="images/day.svg" />");
 
                 }
                 else if (results.currently.summary == "Mostly Cloudy") {
-                    $("#summary").append("<img style=" padding-left:20px;" src="images/cloudy.svg\"  />");
+                    $("#summary").append("<img style=" padding-left:20px;" src="images/cloudy.svg\" />");
                 }
                 else if (results.currently.summary == "Overcast") {
-                    $("#summary").append("<img style=" padding-left:20px;" src="images/cloudy-day-1.svg\"  />");
+                    $("#summary").append("<img style=" padding-left:20px;" src="images/cloudy-day-1.svg\" />");
                 }
 
                 $("#timezone").text(results.timezone);
@@ -1370,10 +1392,9 @@ $("#btnClearForm").click(() => {
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
-   
+
+
     <!--         END OF MODALS          -->
-
-
     <!--<div class="yellow" style="position: absolute; height:100px; width:15px; border-radius:0 5px 5px 0; box-shadow: 0px 0px 19px -1px rgba(0,0,0,0.75); background-color: red; z-index: 10; left:0; top:300px; "></div>-->
     <!--Navigation & Intro-->
     <header>
@@ -1393,7 +1414,7 @@ $("#btnClearForm").click(() => {
                             <a class="nav-link"><i class="fab fa-facebook-f light-green-text-2"></i></a>
                         </li>-->
                         <li class="nav-item">
-                            <a href="https://www.linkedin.com/in/christophe-madoz-14836b18b" target="_blank" class="nav-link"><i class="fab fa-linkedin-in light-green-text-2"></i></a>
+                            <a href="https://www.linkedin.com/in/christophe-madoz-6840a630a/" target="_blank" class="nav-link"><i class="fab fa-linkedin-in light-green-text-2"></i></a>
                         </li>
                     </ul>
                     <!-- Main Menu -->
@@ -1458,47 +1479,39 @@ $("#btnClearForm").click(() => {
 
                 <!-- First row -->
                 <!--<div class="row features-big text-center wow fadeIn" data-wow-delay="0.4s">-->
-
-                    <!-- First column -->
-                    <!--<div class="col-md-4 mb-5">-->
-
-                        <!--Panel-->
-                        <!--<div class="card card-body hoverable">
-                            <i class="fas fa-laptop fa-3x mb-4" aria-hidden="true"></i>
-                            <h5 class="font-weight-bold text-uppercase mb-4">Freelancer</h5>
-                            <p class="dark-grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div>-->
-                        <!--/.Panel-->
-
-                    <!--</div>-->
-                    <!-- /First column -->
-                    <!-- Second column -->
-                    <!--<div class="col-md-4 mb-5">-->
-
-                        <!--Panel-->
-                        <!--<div class="card card-body yellow hoverable">
-                            <i class="fas fa-code fa-3x mb-4" aria-hidden="true"></i>
-                            <h5 class="font-weight-bold text-uppercase mb-4">Developer</h5>
-                            <p class="dark-grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div>-->
-                        <!--/.Panel-->
-
-                    <!--</div>-->
-                    <!-- /.Second column -->
-                    <!-- Third column -->
-                    <!--<div class="col-md-4 mb-5">-->
-
-                        <!--Panel-->
-                        <!--<div class="card card-body hoverable">
-                            <i class="fas fa-pencil-alt fa-3x mb-4" aria-hidden="true"></i>
-                            <h5 class="font-weight-bold text-uppercase mb-4">Designer</h5>
-                            <p class="dark-grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div>-->
-                        <!--/.Panel-->
-
-                    <!--</div>-->
-                    <!-- /.Third column -->
-
+                <!-- First column -->
+                <!--<div class="col-md-4 mb-5">-->
+                <!--Panel-->
+                <!--<div class="card card-body hoverable">
+                    <i class="fas fa-laptop fa-3x mb-4" aria-hidden="true"></i>
+                    <h5 class="font-weight-bold text-uppercase mb-4">Freelancer</h5>
+                    <p class="dark-grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>-->
+                <!--/.Panel-->
+                <!--</div>-->
+                <!-- /First column -->
+                <!-- Second column -->
+                <!--<div class="col-md-4 mb-5">-->
+                <!--Panel-->
+                <!--<div class="card card-body yellow hoverable">
+                    <i class="fas fa-code fa-3x mb-4" aria-hidden="true"></i>
+                    <h5 class="font-weight-bold text-uppercase mb-4">Developer</h5>
+                    <p class="dark-grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>-->
+                <!--/.Panel-->
+                <!--</div>-->
+                <!-- /.Second column -->
+                <!-- Third column -->
+                <!--<div class="col-md-4 mb-5">-->
+                <!--Panel-->
+                <!--<div class="card card-body hoverable">
+                    <i class="fas fa-pencil-alt fa-3x mb-4" aria-hidden="true"></i>
+                    <h5 class="font-weight-bold text-uppercase mb-4">Designer</h5>
+                    <p class="dark-grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>-->
+                <!--/.Panel-->
+                <!--</div>-->
+                <!-- /.Third column -->
                 <!--</div>-->
                 <!-- /.First row -->
 
@@ -1628,12 +1641,10 @@ $("#btnClearForm").click(() => {
 
                         </div>
 
-                            
 
-                        </div>
-                        <!--/Second column-->
 
-                    
+                    </div>
+                    <!--/Second column-->
                     <!--/First row-->
 
                 </section>
@@ -1736,8 +1747,8 @@ $("#btnClearForm").click(() => {
 
                         <div class="mdb-lightbox">
 
-                            <figure id="projPic2" class="col-md-4">
-                                <a href="http://66.226.40.133/" id="bugTrackerApp" data-size="1600x1067">
+                            <figure id="projPic2" class="col-md-4" data-toggle="modal" data-target="#modalBugTrackerApp">
+                                <a href="" id="bugTrackerApp" data-size="1600x1067">
 
                                     <img src="images/bug_tracker_app.png" class="img-fluid z-depth-1" />
 
@@ -1761,7 +1772,7 @@ $("#btnClearForm").click(() => {
 
                             <figure class="col-md-4">
                                 <a href="" id="blogApp" data-size="1600x1067">
-                                    <img src="images/MyBlog.png" class="img-fluid z-depth-1" />
+                                    <img src="images/HVACproject.jpg" class="img-fluid z-depth-1" />
                                 </a>
                             </figure>
                             <figure class="col-md-4">
@@ -1775,9 +1786,9 @@ $("#btnClearForm").click(() => {
 
 
 
-                </div>
-                <!-- /.First row -->
                     </div>
+                    <!-- /.First row -->
+                </div>
             </section>
             <!-- /.Fourth section -->
 
@@ -1851,7 +1862,7 @@ $("#btnClearForm").click(() => {
                             <!--/.Third row-->
                             <div class="text-center text-md-left mt-4"> <a class="btn btn-primary" id="sendEmail">Send</a> </div>
                         </form>
-                        
+
                     </div>
                     <!--.First column-->
                     <!--Second column-->
@@ -1865,7 +1876,7 @@ $("#btnClearForm").click(() => {
                         </ul>
                         <div id="message"></div>
                     </div>
-                   
+
                     <!--.Second column-->
                 </div>
 
@@ -1910,7 +1921,7 @@ $("#btnClearForm").click(() => {
     <script src="Scripts/jquery.validate.min.js"></script>
     <script src="Scripts/additional-methods.min.js"></script>
     <script src="https://unpkg.com/vue@2.5.3"></script>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.35.4/js/bootstrap-dialog.min.js"></script>
     <script src="Scripts/smtp.js"></script>
     <script src="Scripts/site.js"></script>
