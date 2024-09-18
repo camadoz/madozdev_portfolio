@@ -369,6 +369,7 @@
     <Content Include="images\Tech_support.gif" />
     <Content Include="images\weather.jpg" />
     <Content Include="images\weather_app.png" />
+    <None Include="index.html.BAK" />
     <Content Include="index.html" />
     <Content Include="Scripts\additional-methods.min.js" />
     <Content Include="Scripts\jquery-1.4.4.js" />
